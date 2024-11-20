@@ -1,0 +1,46 @@
+// fonts
+$bold-font: 'Franklin-Gothic';
+$body-font: 'Ebrima';
+$sub-font: 'Lucida-Console';
+
+
+// fontface
+/* cloudconvert.com for fonts face convertion. Thank You */
+@font-face {
+    font-family: 'Franklin-Gothic';
+    src: url('../fonts/franklin-gothic.eot');
+    src: url('../fonts/franklin-gothic.otf') format('embedded-opentype'),
+        url('../fonts/franklin-gothic.woff2') format('woff2'),
+        url('../fonts/franklin-gothic.woff') format('woff'),
+        url('../fonts/franklin-gothic.ttf') format('truetype'),
+        url('../fonts/franklin-gothic.svg') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lucida-Console';
+    src: url('../fonts/lucida-console.eot');
+    src: url('../fonts/lucida-console.otf') format('embedded-opentype'),
+        url('../fonts/lucida-console.woff2') format('woff2'),
+        url('../fonts/lucida-console.woff') format('woff'),
+        url('../fonts/lucida-console.ttf') format('truetype'),
+        url('../fonts/lucida-console.svg') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ebrima';
+    src: url('../fonts/ebrima-regular.eot');
+    src: url('../fonts/ebrima-regular.otf') format('embedded-opentype'),
+        url('../fonts/ebrima-regular.woff2') format('woff2'),
+        url('../fonts/ebrima-regular.woff') format('woff'),
+        url('../fonts/ebrima-regular.ttf') format('truetype'),
+        url('../fonts/ebrima-regular.svg') format('svg');
+    font-weight: lighter;
+    font-style:normal;   
+    font-display: swap;
+}

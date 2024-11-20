@@ -1,0 +1,27 @@
+@use 'colors' as c; 
+@use 'fonts' as f;  
+
+@mixin cta-buttons{
+    button{
+        background-color: c.$red;
+        font-family: f.$body-font;
+        cursor: pointer;
+        color: c.$white;
+        text-transform: uppercase;
+        text-align: center;
+        border: 1px solid c.$white; 
+        position: relative;
+        overflow: hidden; 
+        background: linear-gradient(to left, c.$red 50%, c.$black 50%);
+        background-size: 200% 100%; 
+        background-position: 100% bottom; 
+        transition: background-position 0.5s ease-in-out; 
+    }
+    button:hover{
+        background-position: 100% bottom;
+        border: 1px solid c.$white; 
+        transition: border 1s ease-in-out, background-position 0.5s ease-in-out;
+        background: linear-gradient(to right, c.$red 50%, c.$black 50%);
+        background-size: 200% 100%;  
+    }
+}
