@@ -8,18 +8,18 @@ a{
 #top-nav{
     height: 70px;
     background-color: a.$black;
-    padding-top: 10px;
     padding-bottom: 10px;
+    background-color: a.$black;
     #header{
         display: flex;
         justify-content: space-between;
         align-items: center;
         background-color: a.$black;
-        // height: 12vh;
         border-bottom: 10px solid a.$white;
         position: fixed;
         width: 100vw;
         z-index: 99;
+        padding-top: 10px;
     }
 
     .container-mobile-top-logo{
@@ -40,7 +40,7 @@ a{
         cursor: pointer;
         img{
             width: 12vw;
-            height: 9vh;
+            height: auto;
             margin-left: 30px;
             
         }
@@ -276,7 +276,7 @@ a{
 //   DESKTOP
 @media screen and (min-width: 1280px) {
     #top-nav{
-        height: 50px;
+        height: 60px;
         .container-mobile-top-logo{
             display: none;
         }
@@ -288,7 +288,7 @@ a{
         }
        
         #header{
-            height: 4vh;
+            height: 8vh;
             border-bottom: 0px;
             margin-left: 30px;
       
@@ -298,7 +298,8 @@ a{
         .mobilie-top-logo{
             margin-left: 50px;
             img{
-                width: 2vw;
+                width: 30px;
+                height: auto;
             }
         }
       
