@@ -1,1 +1,85 @@
 @use "../abstracts" as a;
+@use "../abstracts/mixins" as m;
+
+body{
+    background-color: a.$black;
+}
+
+// HERO SECTION
+
+#hero-main{
+    position: relative;
+    overflow-x: hidden;
+    height:auto;
+    background-position: center;
+    background-size: cover;
+    inset: 0;
+    width: 100%;
+    height: 50%;
+    padding: 0;
+    color: a.$white;
+    
+
+    picture{
+      position: relative;
+      overflow: hidden;
+      margin-top: -30px;
+      z-index: -1;
+      justify-items: center;
+      align-content: center;
+      img{
+        width: 95%;
+        height: auto;
+      }
+    }
+    // intro-text
+    #intro-text{
+      text-align: left;
+      height: 100%;
+      overflow: hidden;
+      margin-left: 30vw;
+      margin-top: -2vh;
+      position: absolute;
+      z-index: 4;
+      justify-content: center;
+      align-content: center;
+      top: 0;
+      
+      #intro-names{
+      text-align: left;
+      
+          h2{
+              font-family: a.$bold-font;
+              font-size: 6vw;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+          }
+         
+     }
+     h3{
+      color: a.$red;
+      font-family: a.$body-font;
+      font-size: 5vw;
+      text-transform: uppercase;
+      padding-top: 10px;
+      
+      }
+       .intro-bio{
+        width: 60vw;
+       }
+       p{
+        font-family: a.$body-font;
+        margin-top: 1vh;
+        letter-spacing: .5px;
+       }
+    }
+    .cta-work{
+      position: absolute;
+      top: 67%;
+      left: 42%;
+      cursor: pointer;
+      z-index: 12;
+      @include m.cta-buttons; 
+  
+    }
+  }

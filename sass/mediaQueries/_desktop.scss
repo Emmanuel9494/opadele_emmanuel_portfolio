@@ -1,4 +1,51 @@
 @use "../abstracts" as a;
+@use "../abstracts/mixins" as m;
 @media screen and (min-width: 1280px) {
+   // HERO SECTION
+   #hero-main{
+    picture{
+      margin-top: -190px;
+      z-index: -1;
+      img{
+        width: 100%;
+        height: 70%;
+      }
+    }
+    // intro-text
+    #intro-text{
+      margin-left: 30vw;
+      margin-top: -5vh;
+      #intro-names{
+      text-align: left;
+      margin-top: -150px;
+      
+          h2{
+              font-size: 3vw;
+              letter-spacing: 1px;
+          }
+         
+     }
+     h3{
+      font-size: 3vw;
+      padding-top: 10px;
+      margin-top: -10px;
+      }
+       .intro-bio{
+        width: 40vw;
+       }
+       p{
+        margin-top: 50px;
+        letter-spacing: .5px;
+       }
+    }
+    .cta-work{
+      top: 55%;
+      left: 40%;
+     .click-button{
+        width: 150px;
+        font-size: 18px;
+     }
+    }
+  }
 
 }
