@@ -1,1 +1,397 @@
 @use "../abstracts" as a;
+@use "../abstracts/mixins" as m;
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#top-nav{
+    height: 70px;
+    background-color: a.$black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    #header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: a.$black;
+        // height: 12vh;
+        border-bottom: 10px solid a.$white;
+        position: fixed;
+        width: 100vw;
+        z-index: 99;
+    }
+
+    .container-mobile-top-logo{
+      margin-left:20px; 
+      cursor: pointer;
+        img{
+            width: 8vw;
+        }
+    }
+
+    .container-mobile-top-logo-swap{
+        transform: rotate(90deg);
+        transition: transform .5s ease-in-out;
+        animation: low 2s infinite;
+    }
+
+    .mobilie-top-logo{
+        cursor: pointer;
+        img{
+            width: 12vw;
+            height: 9vh;
+            margin-left: 30px;
+            
+        }
+    }
+  
+    #cv-resume{
+        text-align: center;
+        @include m.cta-buttons;  
+    }
+    #head-nav{
+        position: absolute;
+        width: 100vw;
+        background-color: a.$black;
+        filter: blur(70);
+        left:0;
+        z-index: -1;
+        top:90%;
+        
+        a{
+            text-decoration: none;
+            color: a.$white;
+            font-family: a.$body-font;
+            font-size: 4vw;
+        }
+        .arrow-icon > a::after{
+            content: '';
+            position: absolute;
+            width: 12px; 
+            height: 12px;
+            background-image: url('../images/arrow-right.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-top: 2vw;
+            margin-left: 10px;
+  
+        }
+        
+        ul{
+            list-style: none;
+            padding-top: 20px;
+            justify-content: center;
+            align-self: center;
+            margin-left: -8vw;
+        }
+        ul li{
+            padding-bottom: 5px;
+            padding-top: 5px;
+            margin-bottom: 15px;
+            border-top: .1px solid a.$red; 
+            padding-left: 15px; 
+        }
+        p{
+            text-align: center;
+            margin-top: 5vh;
+            text-decoration: none;
+            font-family: a.$body-font;
+            font-size: 3vw;
+            margin-bottom: 5vh;
+            margin-left:-19vw;
+            
+        }
+    }
+    .sub-menu1, .sub-menu2, .mb-nav{
+        display: none;
+    }
+    .sub-menu1.show{
+        display: block;
+        margin-left: 12vw;
+        border: none;
+    }
+    .sub-menu2.show{
+        display: block;
+        margin-left: 12vw;
+        opacity: 1;
+        transition: opacity 5s ease-in-out;
+    }
+    .sub-menu1 ul li{
+        padding-bottom: 5px;
+        padding-top: 5px;
+        margin-bottom: 15px;
+        border-top: 1px solid a.$red;  
+    }
+    .sub-menu2 ul li{
+        padding-bottom: 5px;
+        padding-top: 5px;
+        margin-bottom: 15px;
+        border-top: 1px solid a.$red;  
+    }
+    
+  }
+
+  @media screen and (min-width: 768px) {
+    #top-nav{  
+        height: 50px;
+        .container-mobile-top-logo{
+            display: none;
+        }
+        .mb-nav{
+            display: block;
+        }
+        .no-tblet{
+            display: none;
+        }
+        .no-use{
+            display: block;
+        }
+       
+        #header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 10vh;
+            border-bottom: 10px solid a.$white;
+            position: fixed;
+            width: 100%;
+      
+        }
+        
+      
+        .mobilie-top-logo{
+            img{
+                width: 3vw;
+            }
+        }
+      
+        #cv-resume{
+            text-align: center;
+        }
+        #head-nav{
+            position: relative;
+            width: 62vw;
+            background-color: transparent;
+            filter: blur(70);
+            left:0;
+            z-index: 1;
+            top:0;
+            
+            a{
+                text-decoration: none;
+                color: a.$white;
+                font-family: a.$body-font;
+                font-size: 1.5vw;
+                text-transform: uppercase;
+            }
+            .arrow-icon > a::after{
+                content: '';
+                position: absolute;
+                width: 12px; 
+                height: 12px;
+                background-image: url('../images/arrow-right.svg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin-top: .7vw;
+                margin-left: 3px;
+                rotate: 90deg;
+      
+            }
+            
+            ul{
+                display: flex;
+                list-style: none;
+                align-self: center;
+                margin-left: -8vw;
+            }
+            ul li{
+                padding-bottom: 5px;
+                padding-top: 5px;
+                margin-right: 25px;
+                border-top: .1px solid var(--red-color);  
+               
+            }
+            #work-select{
+                position: relative;
+                
+            
+                ul{
+                    display: block;
+                }
+                .sub-menu1.show{
+                    position: absolute;
+                    background-color: rgb(0, 0, 0);
+                    width: 100.8vw;
+                    margin-left: -390px;
+                    margin-top:20px;
+                    opacity: 1;
+                    transition: opacity 5s ease-in-out;
+                }
+            }
+            p{
+                text-align: center;
+                margin-top: 5vh;
+                text-decoration: none;
+                font-family: a.$body-font;
+                font-size: 5vw;
+                margin-bottom: 5vh;
+                margin-left:-19vw;
+                
+            }
+        }
+        .sub-menu1, .sub-menu2{
+            display: none;
+        }
+        .sub-menu1.show{
+            margin-left: -10vw;
+            border: none;
+            opacity: 1;
+            transition: opacity 5s ease-in-out;
+        }
+        .sub-menu2.show{
+            display: block;
+            margin-left: 1vw;
+            opacity: 1;
+            transition: opacity 5s ease-in-out;
+        }
+        .sub-menu1 ul li{
+            padding-bottom: 5px;
+            padding-top: 5px;
+            margin-bottom: 25px;
+            border-top: 1px solid a.$red;  
+        }
+        .sub-menu1 ul {
+            padding-left: 300px;
+            padding-bottom: 20px;
+            
+        }
+        .sub-menu1 ul li:hover{
+            color: a.$red;
+            transition: color 3s ease-in-out;
+        }
+      } 
+
+  }
+//   DESKTOP
+@media screen and (min-width: 1280px) {
+    #top-nav{
+        height: 50px;
+        .container-mobile-top-logo{
+            display: none;
+        }
+        .mb-nav{
+            display: block;
+        }
+        .no-tblet{
+            display: none;
+        }
+       
+        #header{
+            height: 4vh;
+            border-bottom: 0px;
+            margin-left: 30px;
+      
+        }
+        
+      
+        .mobilie-top-logo{
+            margin-left: 50px;
+            img{
+                width: 2vw;
+            }
+        }
+      
+        #head-nav{
+            width: 45vw;
+            
+            a{
+                font-size: 1.5vw;
+                padding-bottom: 10px;
+                font-size: 1vw;
+                text-transform: uppercase;
+            }
+            .arrow-icon > a::after{
+                margin-top: .3vw;
+            }
+            
+            ul{
+                display: flex;
+                list-style: none;
+                padding-top: 10px;
+                justify-content: space-between;
+                align-self: center;
+            }
+            ul li{
+                padding-bottom: 5px;
+                padding-top: 5px;
+                margin-right: 25px;
+                border-top: .1px solid var(--red-color);  
+                :hover{
+                    color: a.$red; 
+                    transition: color .5s ease-in-out;
+                  }
+               
+            }
+          
+            #work-select{
+                position: relative;
+                ul{
+                    display: flex;
+                    background-color: rgb(0, 0, 0);
+                    width: 90%;
+                }
+                .sub-menu1.show{
+                    position: absolute;
+                    background-color: rgb(0, 0, 0);
+                    width: 100vw;
+                    // margin-left: -418px;
+                    opacity: 1;
+                    transition: opacity 5s ease-in-out;
+                    overflow-x: hidden;
+                    // left: 0;
+                    
+                }
+            }
+            p{
+                text-align: center;
+                margin-top: 5vh;
+                text-decoration: none;
+                font-family: a.$body-font;
+                font-size: 5vw;
+                margin-bottom: 5vh;
+                margin-left:-19vw; 
+            }
+        }
+        .sub-menu1, .sub-menu2{
+            display: none;
+        }
+        .sub-menu1.show{
+            margin-left: -10vw;
+            border: none;
+            opacity: 1;
+            transition: opacity 5s ease-in-out;
+        }
+        .sub-menu2.show{
+            display: block;
+            margin-left: 1vw;
+            opacity: 1;
+            transition: opacity 5s ease-in-out;
+        }
+        .sub-menu1 ul li{
+            padding-bottom: 5px;
+            padding-top: 5px;
+            margin-bottom: 25px;
+            border-top: 1px solid a.$red;  
+        }
+        .sub-menu1 ul {
+            padding-left: 120px;
+            padding-bottom: 20px;
+            margin-left: -50px;
+        }
+        .sub-menu1 ul li:hover{
+            color: a.$red;
+            transition: color 3s ease-in-out;
+        }
+      } 
+}

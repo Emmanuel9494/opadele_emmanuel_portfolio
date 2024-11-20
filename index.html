@@ -2,10 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="images/red-Logo.svg"  rel="icon" type="image/svg+xml">
+        <link href="css/reset.css" rel="stylesheet">
+        <link href="css/grid.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <title>E.O Opadele</title>
 </head>
 <body>
+    <h1 class="hidden">Welcome to Emmanuel Opadele's Portfolio</h1>
+    
+    <div id="top-nav">
+        <section id="header" class=" full-width-grid-con grid-con ">
+            <h2 class="hidden">Emmanuel's Portfolio Home Page</h2>
+
+         <!-- Mobile Menu Icon -->
+         <div class="container-mobile-top-logo no-use2 col-start-1 col-span-1">
+             <img src="images/mobile-menu-icon.svg" alt="menu">
+         </div>
+
+        <!-- Mobile Logo -->
+        <div class="mobilie-top-logo no-use2 col-start-2 col-span-2 m-col-start-4">
+         <a href="intro.html">
+             <img src="images/red-Logo.svg" alt="menu">
+         </a>
+      </div>
+    
+        <!-- Header Navigation -->
+        <div id="head-nav" class=" mb-nav l-col-start-3 l-col-span-5 m-col-start-3 m-col-end-10">
+            <ul>
+                <li><a href="#">Home</a></li>
+				<li id="work-select" class="arrow-icon"><a href="#">Works</a>
+                    <div class="sub-menu1 full-width-grid-con">
+                         <ul class="">
+                             <li><a href="#">Zima Rebrand</a></li>
+                             <li><a href="#">Kavorka</a></li>
+                             <li><a href="#">Trivox</a></li>
+                             <li><a href="#">Beyond This Site</a></li>
+                             
+                          </ul>
+                      </div>
+                </li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+                <li class="no-tblet"><a href="assets/cv-test.docx" download="cv-test.docx">Download CV</a></li>
+                <li><a href="#">Beyond This Site</a></li>
+                
+                <p class="no-tblet">2024 Emmanule Opadele</p>
+
+            </ul>
+        </div>
+
+
+        <!-- Resume button  -->
+        <div id="cv-resume" class="no-use l-col-start-8 l-col-span-2 m-col-start-8 m-col-span-2">
+            <button><p><a href="assets/cv-test.docx" download="cv-test.docx">Download CV</a></p></button>
+        </div>
+
+    
+      
+        </section>
+    </div>
+
+
+
+
+
+
+
+    <!-- Script Start-->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+        <script src="js/main.js"></script> 
+    <!-- Script End -->
     
 </body>
 </html>
