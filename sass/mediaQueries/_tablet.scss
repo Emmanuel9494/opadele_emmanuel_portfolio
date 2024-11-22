@@ -39,7 +39,67 @@
     .cta-work{
       top: 70%;
       left: 42%;
+      font-size: 12px;
+      .click-button{
+        width: 150px;
+        font-size: 12px;
+     }
     }
   }
 
+  // BRAND NAME AND TEXT SWITCHING
+#brand-name{
+  .f-named{
+      width: 15px;
+      font-size: 16px;
+      line-height: 38px;  
+  }
+  .l-named{
+      width: 15px;
+      font-size: 16px;
+      line-height: 40px;
+     
+  }
+}
+#index-text-switch{
+  overflow: hidden;
+  display: block;
+  margin-top: -270px;
+  .top-text-switch{
+      font-size: 50px;
+      font-weight: 500;
+  }
+  .middle-text-switch{
+      font-size: 85px;
+      font-weight: 500;
+     
+     
+  }
+  .bottom-text-switch{
+      font-family: a.$bold-font;
+      font-size: 50px;
+      font-weight: 500; 
+  }
+}
+// Experience Section
+#xp-rience{
+  color: a.$white;
+  margin-top: 20px;
+  .xp-head{
+     font-size: 55px;
+  }
+  .xp-sub-head{
+      font-size: 20px;
+      letter-spacing: 2px;
+  }
+  .xp-note-container{
+      .xp-note{
+          width: 70%;
+          font-size: 16px;
+      }
+  }
+}
+
+
+// MEDIA QUERY END WRITE ABOVE
 }
