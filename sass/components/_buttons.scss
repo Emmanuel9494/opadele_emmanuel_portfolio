@@ -1,4 +1,5 @@
 @use "../abstracts" as a;
+@use "../abstracts/mixins" as m;
 .bg-tex {
     width: 100%;
     height: 100%;
@@ -8,7 +9,7 @@
     background-size: cover;
     z-index: -5;
     animation: move-bg 15s infinite linear;
-    opacity: .6;
+    opacity: .8;
 }
 @keyframes move-bg {
     0% { background-position: center; }
