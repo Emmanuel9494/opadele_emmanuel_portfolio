@@ -38,6 +38,7 @@ a{
 
     .mobilie-top-logo{
         cursor: pointer;
+        margin-block: 10px;
         img{
             width: 12vw;
             height: auto;
@@ -103,7 +104,7 @@ a{
             
         }
     }
-    .sub-menu1, .sub-menu2, .mb-nav{
+    .sub-menu1, .mb-nav{
         display: none;
     }
     .sub-menu1.show{
@@ -111,19 +112,7 @@ a{
         margin-left: 12vw;
         border: none;
     }
-    .sub-menu2.show{
-        display: block;
-        margin-left: 12vw;
-        opacity: 1;
-        transition: opacity 5s ease-in-out;
-    }
     .sub-menu1 ul li{
-        padding-bottom: 5px;
-        padding-top: 5px;
-        margin-bottom: 15px;
-        border-top: 1px solid a.$red;  
-    }
-    .sub-menu2 ul li{
         padding-bottom: 5px;
         padding-top: 5px;
         margin-bottom: 15px;
@@ -156,7 +145,6 @@ a{
             border-bottom: 10px solid a.$white;
             position: fixed;
             width: 100%;
-      
         }
         
       
@@ -217,17 +205,15 @@ a{
             }
             #work-select{
                 position: relative;
-                
-            
                 ul{
                     display: block;
                 }
                 .sub-menu1.show{
                     position: absolute;
-                    background-color: rgb(0, 0, 0);
-                    width: 100.8vw;
-                    margin-left: -390px;
-                    margin-top:20px;
+                    background-color: rgba(0, 0, 0, 0.776);
+                    width: 110vw;
+                    margin-left: -215px;
+                    margin-top:37px;
                     opacity: 1;
                     transition: opacity 5s ease-in-out;
                 }
@@ -243,18 +229,11 @@ a{
                 
             }
         }
-        .sub-menu1, .sub-menu2{
+        .sub-menu1{
             display: none;
         }
         .sub-menu1.show{
-            margin-left: -10vw;
             border: none;
-            opacity: 1;
-            transition: opacity 5s ease-in-out;
-        }
-        .sub-menu2.show{
-            display: block;
-            margin-left: 1vw;
             opacity: 1;
             transition: opacity 5s ease-in-out;
         }
@@ -262,7 +241,7 @@ a{
             padding-bottom: 5px;
             padding-top: 5px;
             margin-bottom: 25px;
-            border-top: 1px solid a.$red;  
+            border-top: 1px solid a.$red;
         }
         .sub-menu1 ul {
             padding-left: 300px;
@@ -341,20 +320,15 @@ a{
             #work-select{
                 position: relative;
                 ul{
-                    display: flex;
-                    background-color: rgb(0, 0, 0);
-                    width: 90%;
+                    width: 100%;
+                    margin-left: 50px;
                 }
                 .sub-menu1.show{
                     position: absolute;
-                    background-color: rgb(0, 0, 0);
-                    width: 100vw;
-                    // margin-left: -418px;
+                    width: 900px;
                     opacity: 1;
                     transition: opacity 5s ease-in-out;
                     overflow-x: hidden;
-                    // left: 0;
-                    
                 }
             }
             p{
@@ -367,7 +341,7 @@ a{
                 margin-left:-19vw; 
             }
         }
-        .sub-menu1, .sub-menu2{
+        .sub-menu1{
             display: none;
         }
         .sub-menu1.show{
@@ -376,12 +350,7 @@ a{
             opacity: 1;
             transition: opacity 5s ease-in-out;
         }
-        .sub-menu2.show{
-            display: block;
-            margin-left: 1vw;
-            opacity: 1;
-            transition: opacity 5s ease-in-out;
-        }
+        
         .sub-menu1 ul li{
             padding-bottom: 5px;
             padding-top: 5px;
@@ -389,7 +358,7 @@ a{
             border-top: 1px solid a.$red;  
         }
         .sub-menu1 ul {
-            padding-left: 120px;
+            padding-left: 0;
             padding-bottom: 20px;
             margin-left: -50px;
         }

@@ -100,53 +100,6 @@ body{
         padding-top: 10px;
         margin-bottom: 10px;
     }
-    .sliders1{
-        display: flex;
-        
-        img{
-            filter: grayscale(1);
-            animation: s1 20s linear infinite ;
-        }
-        img:hover{
-            filter: grayscale(0);
-        }
-        img:active{
-            filter: grayscale(0);
-        }
-    }
-    @keyframes s1 {
-        0% {
-            transform: translateX(100%); /* Start position */
-        }
-        100% {
-            transform: translateX(-200%); /* Return to the start */
-        }
-    }
-    .sliders2{
-        display: flex;
-        
-        img{
-            filter: grayscale(1);
-            animation: s2 20s linear infinite ;
-            animation-play-state: running;
-        }
-        img:hover{
-            filter: grayscale(0);
-            animation-play-state: paused;
-        }
-        img:active{
-            filter: grayscale(0);
-            animation-play-state: paused;
-        }
-    }
-    @keyframes s2 {
-        0% {
-            transform: translateX(-200%); /* Start position */
-        }
-        100% {
-            transform: translateX(100%); /* Return to the start */
-        }
-    }
 }
 
 #brand-name{
@@ -175,10 +128,10 @@ body{
         flex-direction: column;
         font-size: 16px;
         text-transform: uppercase;
-        text-align: center;
+        text-align: right;
         line-height: 30px;
         font-family: a.$body-font;
-        margin-left: 60px;
+        margin-left: 80px;
     }
 }
 #index-text-switch{
@@ -196,12 +149,10 @@ body{
     }
     .middle-text-switch{
         font-family: a.$bold-font;
-        font-size: 50px;
+        font-size: 40px;
         text-transform: uppercase;
         color: a.$white;
         font-weight: 500;
-       
-       
     }
     .bottom-text-switch{
         font-family: a.$bold-font;
@@ -278,8 +229,6 @@ hr{
         p{
             font-family: a.$body-font;
             font-size: 12px;
-            // text-align: right;
-            
         }
         
         .cta-work{
@@ -394,7 +343,6 @@ hr{
         background: a.$red;
         text-transform: uppercase;
         margin-block: 15px;
-        // width: 50%;
         justify-self: center;
         font-weight: 600;
         padding: 5px;
@@ -405,10 +353,7 @@ hr{
         justify-items: center;
         margin-block-end: 30px;
         @include m.cta-buttons;
-        img{
-            background-image: cov;
-            
-        }
+        
        button{
        background-color: a.$red;
        width: 169px;

@@ -52,6 +52,7 @@
   // Experience Section
 #xp-rience{
   margin-top: 20px;
+  margin-bottom: 20px;
   .xp-head{
      font-size: 55px;
   }
@@ -66,6 +67,109 @@
       }
   }
 }
+// Works Completed
+#works{
+  margin-top: 20px;
+  h3{
+      font-size: 45px;
+      padding-block: 15px;
+  }
+  .mini-works{
+      margin-bottom: 35px;
+      margin-top: 30px;      
+  }
+}
 
+// about Section
+#main-about{
+  h2{
+    font-size: 45px;
+  }
+  .social-logo{
+    margin-block: 20px;
+      img{
+          margin-left: 40px;
+          margin-right: 40px;
+          cursor: pointer;
+          width: 70px;
+          height: auto;
+      }
+  }
+  p{
+      text-align: center;
+      line-height: 25px;
+      font-size: 18px;
+  }
+  .abt-tab {
+      margin-block: 20px;
+  }
+  
+  .abt-head {
+      border: 2px solid a.$white;
+      font-size: 18px; 
+  }
+  
+}
+// Beyond The site
+#beyond{
+  margin-top: 40px;
+  h2{
+    font-size: 35px;
+  }
+  .icon{
+      width: 40px;
+  }
+  .b-notes{
+      text-align: center;
+      font-family: a.$body-font;
+      font-size: 18px;
+  }
+  .my-name{
+      padding-left: 25px;
+      padding-right: 25px;
+      letter-spacing: 2px;
+
+  }
+  .beyond-ad{
+      justify-items: center;
+      margin-block-end: 30px;
+      @include m.cta-buttons;
+      img{
+         width: 100%;
+         height: auto;
+          
+      }
+     button{
+     font-size: 18px;
+     }
+  }
+}
+// Contact
+#contact{
+  color: a.$white;
+  margin-block: 25px;
+  h3{
+      margin-block: 15px;
+      text-transform: uppercase;
+      font-family: a.$bold-font;
+      font-size: 45px;
+      justify-self: center;
+  }
+  .email{
+      justify-self: center;
+      margin-block-end: 15px;
+      width: 60px;
+      height: auto;
+  }
+  p{
+      justify-self: center;
+      text-align: center;
+      font-family: a.$body-font;
+      font-size: 18px;
+      margin-bottom: 15px;
+  }
+}
+
+// Write Code Above this Line
 }
 

@@ -9,7 +9,7 @@
     background-size: cover;
     z-index: -5;
     animation: move-bg 15s infinite linear;
-    opacity: .5;
+    opacity: .2;
 }
 @keyframes move-bg {
     0% { background-position: center; }
