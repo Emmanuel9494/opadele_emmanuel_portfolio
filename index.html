@@ -39,14 +39,14 @@
                              <li><a href="#">Zima Rebrand</a></li>
                              <li><a href="#">Kavorka</a></li>
                              <li><a href="#">Trivox</a></li>
-                             <li><a href="#">Beyond This Site</a></li>  
+                             <li><a href="#beyond">Beyond This Site</a></li>  
                           </ul>
                       </div>
                 </li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="#main-about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
                 <li class="no-tblet"><a href="assets/cv-test.docx" download="cv-test.docx">Download CV</a></li>
-                <li><a href="#">Beyond This Site</a></li>
+                <li><a href="#beyond">Beyond This Site</a></li>
                 <p class="no-tblet">2024 Emmanule Opadele</p>
             </ul>
         </div>
@@ -237,7 +237,7 @@
 
                 </div>
              
-                    <div class="mini-works col-start-1 col-span-2">
+                    <div class="mini-works col-start-1 col-span-2 left">
                         <img src="images/mb-zima.png" alt="Zima Rebrand">
                         <h4>Zima Rebrand</h4>
                         <p>This project was part of my academic deliverables, where I was tasked with rebranding Zima, a beer energy drink, to enhance its market presence and drive sales. The rebrand focused on developing a fresh, modern identity that resonates with the target audience while positioning the product as a competitive choice in the beverage industry.</p>
@@ -245,7 +245,7 @@
                             <button class="click-button"><p><a href="">Learn More</a></p></button>
                         </div>
                     </div>
-                    <div class="mini-works  col-start-3 col-span-2">
+                    <div class="mini-works  col-start-3 col-span-2 right" >
                         <img src="images/mb-kavorka.png" alt="Kavorka Cosmetics">
                         <h4>Zima Rebrand</h4>
                         <p>This project was part of my academic deliverables, where I was tasked with rebranding Zima, a beer energy drink, to enhance its market presence and drive sales. The rebrand focused on developing a fresh, modern identity that resonates with the target audience while positioning the product as a competitive choice in the beverage industry.</p>
@@ -273,23 +273,93 @@
                         </div>
                         <p class="col-span-full">[ . Full Stack Dev. Creator. Visual Engineer .] <br> Let's Work!</p>
                         <!-- tabs -->
-                         
-    
+                        <div class=" abt-tab col-span-full">
+                            <p class="abt-head">Who Am I?</p>
+                            <p class="abt-note">My passion merges innovation and technology as I blend creativity with technical skill to craft solutions that are both functional and visually captivating.</p>
+                         </div>
+                         <div class=" abt-tab col-span-full">
+                            <p class="abt-head">Certificates</p>
+                            <p class="abt-note">In Progress...</p>
+                         </div>
+                         <div class=" abt-tab col-span-full">
+                            <p class="abt-head">Lifestyle</p>
+                            <p class="abt-note">Life driven by curiosity and exploration, constantly seeking to bridge the gap between functionality and aesthetics.</p>
+                         </div>
                      </section>
+            <!-- Beyond Site Section -->
+             <section id="beyond" class="grid-con">
+                <h2 class="col-span-full">Beyond This Site</h2>
+                <img src="images/globe-icon.svg" alt="globe Icon" class="col-span-full icon">
+                <p class="col-span-full b-notes">[ "Exploring these pages reveals more of my work and supports my creative journey. Each visit fuels the passion behind these projects making every click part of something greater." ]</p>
+                <p class="my-name col-span-full">Emmanuel Opadele</p>
+                <div class="beyond-ad col-start-1 col-span-2">
+                    <img src="images/otm-pic-logo.png" alt="otm-logo">
+                    <button class="click-button"><p><a href="#">optimum Pictures</a></p></button>
+                </div>
+                <div class="beyond-ad col-start-3 col-span-2">
+                    <img src="images/hando-logo.png" alt="hando-logo">
+                    <button class="click-button"><p><a href="#">Hando Entertaiment</a></p></button>
+                </div>
+                <div class="beyond-ad col-start-1 col-span-2">
+                    <img src="images/kcr-logo.png" alt="kcr-logo">
+                    <button class="click-button"><p><a href="#">Coderedoc Studios</a></p></button>
+                </div>
+                <div class="beyond-ad col-start-3 col-span-2">
+                    <img src="images/otm-pic-logo.png" alt="otm-logo">
+                    <button class="click-button"><p><a href="#">optimum Pictures</a></p></button>
+                </div>
+             </section>
+             <!-- Contact Section -->
+              <section id="contact" class="grid-con">
+                <h2 class="hidden">How To Reach Emmanuel Opadele</h2>
+                <h3 class="col-span-full">Contact</h3>
+                <img src="images/email-icon.svg" alt="email Icon" class="email col-span-full">
+                <p class="col-span-full">[ . Full Stack Dev. Creator. Visual Engineer .] <br> Let's Work!</p>
+                <!-- Contact form -->
+                <div class="col-span-full">
 
-              
+                    <form method="post" action="sendmail.php">
+                    <label for="first_name">First Name: </label>
+                    <input type="text" name="first_name" id="first_name">
+                    <br><br>
+                    <label for="last_name">Last Name: </label>
+                    <input type="text" name="last_name" id="last_name">
+                    <br><br>
+                    <label for="email">Email: </label>
+                    <input type="text" name="email" id="email">
+                    <br><br>
+                    <label for="comments">Messages: </label>
+                    <textarea name="comments" id="comments">comment here</textarea>
+                    <br><br>
+                    <input type="submit" value="send">
+                    </form>
 
-
-
-
-
-
-
+                    </div>  
+              </section>
+              <!-- Footer -->
+               <footer class="grid-con">
+                <h2 class="hidden">Thanks In advance</h2>
+                <p class="col-start-1 col-span-2 p1">You Have an Idea?</p>
+                <p class="col-start-3 col-span-2 p2">Let's Work</p>
+                <hr class="col-span-full">
+                <img src="images/red-Logo.svg" alt="Emmanuel's brand Logo" class="footer-logo col-span-full">
+                <p class="col-span-full advance">Thanks in Advance</p>
+                <p class="col-span-full footer-note">Disclaimer: The works and projects on this site are for portfolio purposes only and may not reflect current availability or pricing. Trademarks and brands mentioned belong to their respective owners. For collaborations or inquiries, please contact me directly.</p>
+                <div  class=" social-logo col-span-full">
+                    <img src="images/fb-logo.svg" alt="Emmanuel's Facebook Page">
+                    <img src="images/insta-logo.svg" alt="Emmanuel's Instagram Page">
+                    <img src="images/x-logo.svg" alt="Emmanuel's x Page">
+                    <img src="images/linkdin-logo.svg" alt="Emmanuel's Linkden Page">
+                </div>
+                <p class="col-span-full rights">©2024 Emmanuel Opadele<br>All Rights Reserved—Privacy Policy.</p>
+                <p class="col-span-full dand">[ . Developer And Designer .]</p>
+               </footer>
 
     <!-- Script Start-->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
         <script src="js/main.js"></script> 
     <!-- Script End -->
     
