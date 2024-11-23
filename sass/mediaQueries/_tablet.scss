@@ -99,6 +99,126 @@
       }
   }
 }
+// Works Completed
+#works{
+  margin-top: 20px;
+  h3{
+      font-size: 35px;
+      padding-block: 15px;
+  }
+  .mini-works{
+      margin-bottom: 35px;
+      margin-top: 20px;
+      h4{
+          font-size: 18px;
+          padding-block: 10px;
+      }
+      p{
+          font-size: 14px;
+          line-height: 25px;
+          text-align: center;
+      }
+        img{
+          width: 100%;
+          height: auto;
+        }
+      
+  }
+  .left p{
+      text-align: center;
+  }
+  .right p{
+      text-align: center;
+  }
+}
+
+// about Section
+#main-about{
+  h2{
+      font-size: 35px;
+  }
+  .social-logo{
+      img{
+          margin-left: 20px;
+          margin-right: 20px;
+          cursor: pointer;
+          width: 50px;
+          height: auto;
+      }
+  }
+  p{
+      text-align: center;
+      line-height: 25px;
+      font-size: 16px;
+  }
+  .abt-tab {
+      margin-block: 20px;
+  }
+  
+  .abt-head {
+      border: 2px solid a.$white; 
+  }
+  
+}
+// Beyond The site
+#beyond{
+  margin-top: 40px;
+  h2{
+    font-size: 35px;
+  }
+  .icon{
+      width: 40px;
+  }
+  .b-notes{
+      text-align: center;
+      font-family: a.$body-font;
+      font-size: 18px;
+  }
+  .my-name{
+      padding-left: 15px;
+      padding-right: 15px;
+      letter-spacing: 2px;
+
+  }
+  .beyond-ad{
+      justify-items: center;
+      margin-block-end: 30px;
+      @include m.cta-buttons;
+      img{
+         width: 100%;
+         height: auto;
+          
+      }
+     button{
+     font-size: 14px;
+     }
+  }
+}
+// Contact
+#contact{
+  color: a.$white;
+  margin-block: 25px;
+  h3{
+      margin-block: 15px;
+      text-transform: uppercase;
+      font-family: a.$bold-font;
+      font-size: 35px;
+      justify-self: center;
+  }
+  .email{
+      justify-self: center;
+      margin-block-end: 15px;
+      width: 60px;
+      height: auto;
+  }
+  p{
+      justify-self: center;
+      text-align: center;
+      font-family: a.$body-font;
+      font-size: 16px;
+      margin-bottom: 15px;
+  }
+}
 
 
 // MEDIA QUERY END WRITE ABOVE

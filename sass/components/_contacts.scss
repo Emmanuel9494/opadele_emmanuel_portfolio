@@ -91,5 +91,12 @@ form input[type="submit"]:hover {
     form input[type="submit"] {
         width: 100%;
         text-align: center;
+        font-weight: 800;
+        font-family: a.$body-font;
+    }
+    form label {
+        font-weight: 100;
+        font-family: a.$body-font;
+        font-size: 14px;
     }
 }
