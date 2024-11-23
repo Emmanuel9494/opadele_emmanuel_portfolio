@@ -1,2 +1,77 @@
 @use "../abstracts" as a;
 @use "../abstracts/mixins" as m;
+
+footer{
+    color: a.$white;
+    margin-top: 25px;
+    .p1{
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-family: a.$body-font;
+        margin-top: 15px;
+    }
+    .p2{
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-family: a.$body-font;
+        margin-top: 95px;
+    }
+    hr{
+        height: 195px;
+        width: 1%;
+        justify-self: center;
+        background: a.$red;
+        border: none;
+        margin-top: -110px;
+    }
+    .footer-logo{
+        justify-self: center;
+        width: 90px;
+        height: auto;
+    }
+    .social-logo{
+        width: auto;
+        display: flex;
+        padding-block: 15px;
+        justify-self:center ;
+        img{
+            margin-left: 15px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        img:hover{
+            filter: invert(26%) 
+            sepia(95%) 
+            saturate(7500%) 
+            hue-rotate(360deg) 
+            brightness(94%) 
+            contrast(100%);
+        }
+    }
+    .advance{
+        text-align: center;
+        font-family: a.$body-font;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-block: 15px;
+    }
+    .footer-note{
+        font-size: 12px;
+        font-family: a.$body-font;
+        text-align: center;
+
+    }
+    .rights{
+        text-align: center;
+        font-family: a.$body-font;
+        margin-block: 15px;
+        font-size: 12px;
+    }
+    .dand{
+        text-align: center;
+        font-family: a.$body-font;
+        font-size: 12px;
+    }
+}
