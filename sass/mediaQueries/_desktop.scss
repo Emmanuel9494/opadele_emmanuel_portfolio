@@ -76,12 +76,17 @@
   }
   .mini-works{
       margin-bottom: 35px;
-      margin-top: 30px;      
+      margin-top: 30px; 
+      img{
+        width: 50%;
+        height: auto;
+      }     
   }
+  
 }
 
 // about Section
-#main-about{
+.main-about{
   h2{
     font-size: 45px;
   }
@@ -91,7 +96,7 @@
           margin-left: 40px;
           margin-right: 40px;
           cursor: pointer;
-          width: 70px;
+          width: 40px;
           height: auto;
       }
   }
@@ -122,7 +127,9 @@
   .b-notes{
       text-align: center;
       font-family: a.$body-font;
-      font-size: 18px;
+      font-size: 16px;
+      max-width: 70%;
+      margin: 0 auto;
   }
   .my-name{
       padding-left: 25px;
@@ -135,12 +142,13 @@
       margin-block-end: 30px;
       @include m.cta-buttons;
       img{
-         width: 100%;
+         max-width: 70%;
          height: auto;
+         margin: 0 auto;
           
       }
      button{
-     font-size: 18px;
+     font-size: 14px;
      }
   }
 }
@@ -169,6 +177,73 @@
       margin-bottom: 15px;
   }
 }
+// Works Page
+#work-hero-main{
+  picture{
+    img{
+      max-width: 60%;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+  #completed-work-intro{
+      position: absolute;
+      top: 58%;
+      left: 50%;
+  }
+  .comp-head{
+      font-size:20px;
+  }
+  .comp-title{
+      margin-block: 10px;
+      font-size: 14px;
+  }
+  .comp-sub-title{
+      font-size: 20px;
+      margin-top: 15px;
+  }
+  .comp-sub-head{
+      margin-block: 10px;
+      font-size: 14px;
+  }
+  .comp-date{
+      span{
+          padding-left: 5px;
+          padding-right: 5px;
+      }
+  }
+  .comp-cta{
+      padding:6px 7px;
+      margin-top: 10px;
+  }
+
+}
+
+.work-show{
+  max-width: 70%;
+  margin: 0 auto; 
+  margin-bottom: 35px;
+  img{
+      max-width: 70%; 
+      height: auto;
+      margin: 0 auto;
+  }
+}
+
+
+#p-info{
+  display: flex;
+  align-items: center;
+  margin-left: 150px;
+  h2{
+      font-size: 16px;
+  }
+  p{
+      width: 60%;
+      margin-left: 20px;
+  }
+}
+
 
 // Write Code Above this Line
 }
