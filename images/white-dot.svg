@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="left-bracket" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1175.87551 1186.41203">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        animation: pulsate 1.5s infinite ease-in-out;
+        transform-origin: center;
+      }
+
+      @keyframes pulsate {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="586.3299" cy="591.87085" r="45.52229" />
+</svg>

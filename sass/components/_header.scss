@@ -20,6 +20,7 @@ a{
         width: 100vw;
         z-index: 99;
         padding-top: 10px;
+        margin-left: -35px;
     }
 
     .container-mobile-top-logo{
@@ -39,6 +40,7 @@ a{
     .mobilie-top-logo{
         cursor: pointer;
         margin-block: 10px;
+        z-index: 50;
         img{
             width: 12vw;
             height: auto;
@@ -145,12 +147,15 @@ a{
             border-bottom: 10px solid a.$white;
             position: fixed;
             width: 100%;
+            margin-left: -45px;
         }
         
       
         .mobilie-top-logo{
             img{
                 width: 3vw;
+                cursor: pointer;
+                z-index: 50;
             }
         }
       
@@ -270,9 +275,11 @@ a{
         }
        
         #header{
-            height: 8vh;
+            max-height: 11vh;
             border-bottom: 0px;
-            margin-left: 30px;
+            margin-left: -55px;
+            border-bottom: 5px solid a.$white;
+          
       
         }
         
@@ -280,8 +287,9 @@ a{
         .mobilie-top-logo{
             margin-left: 50px;
             img{
-                width: 30px;
+                max-width: 50%;
                 height: auto;
+                padding-bottom: 10px;
             }
         }
       

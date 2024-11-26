@@ -1,5 +1,6 @@
 @use "../abstracts" as a;
 @use "../abstracts/mixins" as m;
+@use "../components/introAnimation";
 
 body{
     background-color: a.$black;
