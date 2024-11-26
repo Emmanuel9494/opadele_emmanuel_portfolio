@@ -15,12 +15,17 @@
         justify-items: center;
         align-items: center;
         overflow: hidden;
+        @media screen and (min-width: 1280px) {
+            width: 80%;
+            margin-left: 100px;
+        }
 
     
         .slides{
             width: 100%;
             height: auto;
             display: flex;
+          
             input{
                 display: none;
             }
@@ -29,11 +34,12 @@
     .slide{
         width: 100%;
         transition: 2s;
+       
         img{
             width: 100vw;
             height: auto;
             @media screen and (min-width: 1280px) {
-                height: 450px;
+                height: 400px;
             }
         }
 
@@ -51,7 +57,7 @@
             margin-left: 35vw;
         }
         @media screen and (min-width: 1280px) {
-            // margin-left: 30vw;
+            margin-left: 30vw;
         }
 
         .manual-btn{
@@ -102,6 +108,10 @@
         justify-items: center;
         align-items: center;
         overflow: hidden;
+        @media screen and (min-width: 1280px) {
+            width: 80%;
+            margin-left: 100px;
+        }
 
     
         .slides2{
@@ -120,7 +130,7 @@
             width: 100vw;
             height: auto;
             @media screen and (min-width: 1280px) {
-                height: 450px;
+                height: 400px;
             }
         }
 
@@ -138,7 +148,7 @@
             margin-left: 35vw;
         }
         @media screen and (min-width: 1280px) {
-            // margin-left: 30vw;
+            margin-left: 30vw;
         }
 
         .manual-btn2{

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="left-bracket" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1175.87551 1186.41203">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e41e26;
+      }
+    </style>
+  </defs>
+  <path id="right-bracket-2" data-name="right-bracket" class="cls-1" d="M176.17007,1073.13249V511.8522h36.35234c6.03506-35.69781,15.63257-68.9239,29.0091-99.8234h-65.36144V116.8475h223.86335V23.78559H89.9433v1141.9726h535.07808v-92.6257H176.17007Z"/>
+</svg>
