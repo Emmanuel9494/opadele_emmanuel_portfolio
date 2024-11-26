@@ -1,3 +1,20 @@
+/* Lenis recommended CSS Smooth Scrolling for websites */
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
 /* ---General rules - scales images, videos to size of container--- */
 img, embed, object, video, picture, svg {
     max-width: inherit; 

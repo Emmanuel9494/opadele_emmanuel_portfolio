@@ -1,6 +1,7 @@
 @use "../abstracts" as a;
 @use "../abstracts/mixins" as m;
 @use "../components/introAnimation";
+@use "../components/submittionPage";
 @media screen and (min-width: 1280px) {
    // HERO SECTION
    #hero-main{
@@ -80,7 +81,7 @@
       margin-bottom: 35px;
       margin-top: 30px; 
       img{
-        width: 50%;
+        width: 80%;
         height: auto;
       }     
   }
@@ -227,7 +228,7 @@
   margin: 0 auto; 
   margin-bottom: 35px;
   img{
-      max-width: 70%; 
+      max-width: 90%; 
       height: auto;
       margin: 0 auto;
   }

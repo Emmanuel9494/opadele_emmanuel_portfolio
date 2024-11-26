@@ -1,6 +1,7 @@
 @use "../abstracts" as a;
 @use "../abstracts/mixins" as m;
 @use "../components/introAnimation";
+@use "../components/submittionPage";
 @media screen and (min-width: 768px) {
 
     // HERO SECTION
@@ -71,7 +72,7 @@
       font-weight: 500;
   }
   .middle-text-switch{
-      font-size: 85px;
+      font-size: 65px;
       font-weight: 500;
      
      
@@ -120,7 +121,7 @@
           text-align: center;
       }
         img{
-          width: 60%;
+          width: 100%;
           height: auto;
         }
       
@@ -265,8 +266,10 @@
   width: 100%;
   margin-bottom: 35px;
   img{
-      width: 100%; 
+      width: 80%; 
       height: auto;
+      justify-self: center;
+      padding-block: 15px;
   }
 }
 

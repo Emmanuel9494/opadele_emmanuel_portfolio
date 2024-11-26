@@ -1,6 +1,7 @@
 @use "../abstracts" as a;
 @use "../abstracts/mixins" as m;
 @use "../components/introAnimation";
+@use "../components/submittionPage";
 
 body{
     background-color: a.$black;
@@ -231,6 +232,10 @@ hr{
             font-family: a.$body-font;
             font-size: 12px;
         }
+        img{
+            width: 100%;
+            height: auto;
+          }
         
         .cta-work{
             padding: 10px;
