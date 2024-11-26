@@ -1,0 +1,95 @@
+@use "../abstracts" as a;
+@use "../abstracts/mixins" as m;
+#submit-body{
+    max-height: 100vh;
+    overflow: hidden;
+}
+#submit-main{
+    position: relative;
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    color: a.$white;
+    @media screen and (min-width: 1280px) {
+        // height: 100vh;
+    }
+    picture{
+        position: relative;
+        overflow: hidden;
+        margin-top: -180px;
+        z-index: -1;
+        justify-items: center;
+        align-content: center;
+        max-height: 50%;
+        img{
+          width: 185%;
+          height: 880px;
+          @media screen and (min-width: 1280px) {
+            width: 110%;
+            height: auto;
+            margin-top: -210px;
+        }
+        }
+      }
+      #submit-content{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-position: center;
+        background-size: cover;
+        justify-items: center;
+        width: 100%;
+        @media screen and (min-width: 1280px) {
+          
+            margin-top: -150px;
+        }
+        .im1{
+            max-width:150px;
+            height: auto;
+            padding-block: 15px;
+            justify-self: center;
+        }
+        .greet1{
+            font-size: 12px;
+            font-family: a.$sub-font;
+            font-weight: lighter;
+            margin-bottom: 15px;
+        }
+        .greet2{
+            font-size: 14px;
+            font-family: a.$sub-font;
+            font-weight: light;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .greet3{
+            font-size: 15px;
+            font-family: a.$body-font;
+            margin-bottom: 45px;
+            width: 70%;
+            text-align: center;
+            @media screen and (min-width: 768px) {
+                width: 50%;
+            }
+        }
+        .im2{
+            max-width:150px;
+            height: auto;
+            padding-block: 15px;
+            justify-self: center;
+
+        }
+        .im2:hover{
+            rotate: 30deg;
+        }
+        .greet4{
+            font-size: 15px;
+            font-family: a.$body-font;
+            margin-bottom: 45px;
+            width: 70%;
+            text-align: center;
+        }
+      }
+}
