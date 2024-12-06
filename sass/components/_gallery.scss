@@ -18,6 +18,7 @@
         @media screen and (min-width: 1280px) {
             width: 80%;
             margin-left: 100px;
+            // height: 100px;
         }
 
     
@@ -34,15 +35,19 @@
     .slide{
         width: 100%;
         transition: 2s;
+        height: fit-content;
        
         img{
             width: 100vw;
             height: auto;
             @media screen and (min-width: 768px) {
-                max-height: 300px;
+                max-height: 400px;
+                
             }
             @media screen and (min-width: 1280px) {
-                max-height: 400px;
+                max-height: 80vh;
+                width: 75vw;
+            
             }
         }
 
@@ -61,6 +66,15 @@
         }
         @media screen and (min-width: 1280px) {
             margin-left: 30vw;
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            left: 670px;
+            top: 150px;
+            width: 60px;
+            height: 60px;
+            height: 250px;
+            justify-content: space-around;
         }
 
         .manual-btn{
@@ -71,6 +85,12 @@
             transition: 1s;
             width: 30px;
             height: 30px;
+            @media screen and (min-width: 1280px) {
+                // border-bottom-width: 10px;
+                padding-bottom: 10px;
+                
+                
+            }
         }
     }
     .manual-btn:not(:last-child){
@@ -100,7 +120,7 @@
 // slider2
 #main-slider2{
     display: flex;
-    margin-top: 60px;
+    margin-top: 110px;
     // width: 100%;
     // justify-content: center;
    
@@ -133,11 +153,13 @@
             width: 100vw;
             height: auto;
             @media screen and (min-width: 768px) {
-                max-height: 300px;
+                max-height: 400px;
                 
             }
             @media screen and (min-width: 1280px) {
-                max-height: 400px;
+                max-height: 80vh;
+                width: 75vw;
+            
             }
         }
 
@@ -156,6 +178,15 @@
         }
         @media screen and (min-width: 1280px) {
             margin-left: 30vw;
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            left: 670px;
+            top: 150px;
+            width: 60px;
+            height: 60px;
+            height: 250px;
+            justify-content: space-around;
         }
 
         .manual-btn2{
