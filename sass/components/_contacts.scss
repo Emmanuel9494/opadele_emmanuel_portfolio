@@ -72,7 +72,9 @@ form input[type="submit"] {
     width: 200px;
     color: a.$white;
     border: 1px solid a.$red;
-    
+    @media screen and (min-width: 768px) {
+        margin-left: 29%;
+    }
 }
 
 /* Submit button hover effect */
