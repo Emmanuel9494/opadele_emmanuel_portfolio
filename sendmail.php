@@ -1,6 +1,7 @@
 <?php
 
-require_once('index.php');
+// require_once('index.php');
+require_once('submit.php');
 
 ///gather the form content
 $fname = $_POST['first_name'];

@@ -118,21 +118,21 @@ echo '
     </div>
 </section>
 <div class="grid-con work-show ws1">
-     <img src="images/zima1.png" alt="gif" class="col-span-full">
+     <img src="images/'.$image_array[0].'" alt="gif" class="col-span-full">
 </div>
 <div id="p-info" class="grid-con">
     <h2 class="col-span-full">Project Info:</h2>
     <p class="col-span-full">' . $row['project_info_text'] . '</p>
 </div>
 <div class="grid-con work-show ws2">
-     <img src="images/zima1.png" alt="gif" class="col-span-full">
+     <img src="images/'.$image_array[1].'" alt="gif" class="col-span-full">
 </div>
 <section id="main-about" class="main-about grid-con">
     <div class="abt-tab col-span-full ws3">
         <p class="abt-head w-font">Technology Used:</p>
         <p class="abt-note">' . $row['tech_name'] . '</p>
         <div class="grid-con work-show">
-            <img src="images/zima1.png" alt="gif" class="col-span-full">
+            <img src="images/'.$image_array[2].'" alt="gif" class="col-span-full">
         </div>
     </div>
     <div class="abt-tab col-span-full">
@@ -149,7 +149,7 @@ echo '
     </div>
 </section>
 <div class="grid-con work-show">
-    <img src="images/zima1.png" alt="gif" class="col-span-full">
+    <img src="images/'.$image_array[0].'" alt="gif" class="col-span-full">
 </div>';
 ?>
 
