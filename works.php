@@ -4,12 +4,9 @@
 require_once('includes/connect.php');
 
 
-// Ensure $_GET['id'] is sanitized to prevent SQL injection.
+$query = 'SELECT projects.project_id AS procases, project_title, client_name, year, month, GROUP_CONCAT(DISTINCT multimedia.media_name) AS images, 
+    project_info_text, GROUP_CONCAT(DISTINCT technologies.tech_name) AS tech_name, collaboration, solution_info, problem_info FROM multimedia, projects, projects_techs, technologies WHERE projects.project_id = multimedia.project_id AND projects.project_id = projects_techs.project_id AND technologies.tech_id = projects_techs.tech_id AND projects.project_id = ' . $_GET['id'] . ' GROUP BY projects.project_id';
 
-$id = intval($_GET['id']); 
-
-$query = '
-    SELECT projects.project_id AS procases, project_title, client_name, year, month, GROUP_CONCAT(DISTINCT multimedia.media_name) AS images, project_info_text, GROUP_CONCAT(DISTINCT technologies.tech_name) AS tech_name, collaboration, solution_info, problem_info FROM multimedia, projects, projects_techs, technologies WHERE projects.project_id = multimedia.project_id AND projects.project_id = projects_techs.project_id AND technologies.tech_id = projects_techs.tech_id  AND projects.project_id = '. $id .'  GROUP BY projects.project_id ';
 
 $results = mysqli_query($connect, $query);
 
@@ -18,9 +15,9 @@ $row = mysqli_fetch_assoc($results);
 $image_array = explode(',', $row['images']);
 
 // Debugging: Visually Checking each image result for project ID
-echo '<pre style="color: white;">';
-print_r($image_array);
-echo '</pre>';
+// echo '<pre style="color: white;">';
+// print_r($image_array);
+// echo '</pre>';
 
 ?>
 
