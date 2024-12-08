@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+ $cell=0;
+//connect to the running database server and the specific database
+require_once('includes/connect.php');
+
+//create a query to run in SQL
+$query = 'SELECT project_id AS procases, project_title, project_info_text, main_images FROM projects';
+
+//run the query to get back the content
+$results = mysqli_query($connect,$query);
+?>
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,13 +51,16 @@
         <!-- Header Navigation -->
         <div id="head-nav" class=" mb-nav l-col-start-3 l-col-span-5 m-col-start-3 m-col-end-10">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.php">Home</a></li>
 				<li id="work-select" class="arrow-icon"><a href="#">Works</a>
                     <div class="sub-menu1 full-width-grid-con">
                          <ul class="">
-                             <li><a href="works.html">Zima Rebrand</a></li>
-                             <li><a href="works.html">Kavorka</a></li>
-                             <li><a href="works.html">Trivox</a></li>
+                         <?php
+                            while ($row = mysqli_fetch_array($results)) {
+                                echo '<li><a href="works.php?id=' . $row['procases'] . '">' . $row['project_title']. '</a></li>';
+                            }
+                        ?>
+            
                              <li><a href="#beyond">Beyond This Site</a></li>  
                           </ul>
                       </div>
@@ -241,11 +255,31 @@
                <section id="works" class="grid-con">
                 <h2 class="hidden">Completed Works byEmmanuel Opadele</h2>
                 <h3 class="col-span-full">Work Completed</h3>
-                <div>
+                <?php
+                mysqli_data_seek($results, 0);
 
-                </div>
-             
-                    <div class="mini-works col-start-1 col-span-2 left m-col-start-1 m-col-span-6">
+while($row = mysqli_fetch_array($results)) {
+   
+    
+$cell=$cell+1;
+/* the modulo operator % returns any remainder of dividing 2 numbers. For even numbers it returns 0 */
+if($cell % 2 > 0) {
+    echo ' <div class="mini-works col-start-1 col-span-2 left m-col-start-1 m-col-span-6">';  
+}else{
+    echo '<div class="mini-works  col-start-3 col-span-2 right m-col-start-7 m-col-span-6" >';
+}
+echo 
+'<img src="images/'.$row['main_images'].'" alt="'.$row['project_title'].'">
+                        <h4>'.$row['project_title'].'</h4>
+                        <p class="tb-works">'.$row['project_info_text'].'</p>
+                        <div  class=" cta-work ">
+                            <button class="click-button"><p><a href="works.php?id=' . $row['procases'] . '">Learn More</a></p></button>
+                        </div>
+                    </div>';
+}
+?>
+                
+                    <!-- <div class="mini-works col-start-1 col-span-2 left m-col-start-1 m-col-span-6">
                         <img src="images/zima-main-logo.png" alt="Zima Rebrand">
                         <h4>Zima Rebrand</h4>
                         <p class="tb-works">This project was part of my academic deliverables, where I was tasked with rebranding Zima, a beer energy drink, to enhance its market presence and drive sales. The rebrand focused on developing a fresh, modern identity that resonates with the target audience while positioning the product as a competitive choice in the beverage industry.</p>
@@ -260,7 +294,7 @@
                         <div  class=" cta-work ">
                             <button class="click-button"><p><a href="">Learn More</a></p></button>
                         </div>
-                    </div>
+                    </div> -->
                </section>
                     <!-- About Section -->
                      <section id="main-about" class="grid-con main-about">
@@ -329,7 +363,7 @@
                     <input type="text" name="email" id="email">
                     <br><br>
                     <label for="comments">Messages: </label>
-                    <textarea name="comments" id="comments">comment here</textarea>
+                    <textarea name="comments" id="comments" placeholder="comment here"></textarea>
                     <br><br>
                     <input type="submit" value="send">
                     </form>
