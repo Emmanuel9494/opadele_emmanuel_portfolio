@@ -4,8 +4,8 @@ introAnimation();
 
 
 (function () {
-  // Check if the current page is 'index.html'
-  if (window.location.pathname.includes("index.html") || (window.location.pathname.includes("works.html"))){
+  // Check if the current page is 'index.php'
+  if (window.location.pathname.includes("index.php") || (window.location.pathname.includes("works.php"))){
 
       console.log("JAVA SCRIPT RUNNING!");
       
@@ -50,8 +50,8 @@ introAnimation();
 
 // DEVELOPER AND DESIGNER TEXT ANIMATION
 (function () {
-  // Check if the current page is 'intro.html'
-  if (window.location.pathname.includes("index.html")) {
+  // Check if the current page is 'index.php'
+  if (window.location.pathname.includes("index.php")) {
 
 
       // GSAP ANIMATION
@@ -76,7 +76,7 @@ introAnimation();
 
 // CUSTOM VIDEO
 (function () {
-    if (window.location.pathname.includes('index.html')) {
+    if (window.location.pathname.includes('index.php')) {
         const player = document.querySelector('video');
         const videoControls = document.querySelector('#video-controls');
         const playerButton = document.querySelector('#play-button');
@@ -218,7 +218,7 @@ introAnimation();
 
 // Experience Loop
 (function () {
-    if (window.location.pathname.includes('index.html')) {
+    if (window.location.pathname.includes('index.php')) {
 const experiences = [
   {
       title: "Front-end / Back-End Developer",
@@ -265,7 +265,7 @@ skills(xpCount);
 (function () {
    
 
-    if (window.location.pathname.includes("index.html") || (window.location.pathname.includes("works.html"))){
+    if (window.location.pathname.includes("index.php") || (window.location.pathname.includes("works.php"))){
         const tabs = document.querySelectorAll(".abt-tab");
     
         tabs.forEach((tab) => {
@@ -325,7 +325,7 @@ selectors.forEach((selector, i) => {
 
 // Animations and Scroll Triggers index page
 (function () {
-    if (window.location.pathname.includes("index.html")){
+    if (window.location.pathname.includes("index.php")){
         gsap.registerPlugin(ScrollTrigger);
         gsap.registerPlugin(ScrollToPlugin);
         const tl = gsap.timeline();
@@ -414,24 +414,24 @@ selectors.forEach((selector, i) => {
             { opacity: 1, duration: 1, y: 0, ease: "expo.out" }
           );
  //   Works Completed
-        gsap.from(".mini-works", {
-            scrollTrigger: {
-              trigger: ".mini-works",
-              start: "top 80%",
-              toggleActions: "play reverse play reverse",
-              markers: false
-            },
-            opacity: 0,
-            y: 100,
-            duration: 1,
-            ease: "power1.out"
-          });
+        // gsap.from(".mini-works", {
+        //     scrollTrigger: {
+        //       trigger: ".mini-works",
+        //       start: "top 80%",
+        //       toggleActions: "play reverse play reverse",
+        //       markers: true
+        //     },
+        //     opacity: 0,
+        //     y: 100,
+        //     duration: 1,
+        //     ease: "power1.out"
+        //   });
           //   About Section
         gsap.from("#main-about", {
             scrollTrigger: {
               trigger: "#main-about",
               start: "top 80%",
-              toggleActions: "play reverse play reverse",
+              toggleActions: "play reverse play none",
               markers: false
             },
             opacity: 0,
@@ -487,7 +487,7 @@ selectors.forEach((selector, i) => {
 })();
 // Animations and Scroll Triggers Works page
 (function () {
-    if (window.location.pathname.includes("works.html")){
+    if (window.location.pathname.includes("works.php")){
         gsap.registerPlugin(ScrollTrigger);
         gsap.registerPlugin(ScrollToPlugin);
         const tl = gsap.timeline();
