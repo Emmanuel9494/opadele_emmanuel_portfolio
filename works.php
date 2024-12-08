@@ -62,13 +62,20 @@ echo '</pre>';
         <!-- Header Navigation -->
         <div id="head-nav" class=" mb-nav l-col-start-3 l-col-span-5 m-col-start-3 m-col-end-10">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.php">Home</a></li>
 				<li id="work-select" class="arrow-icon"><a href="#">Works</a>
-                    <div class="sub-menu1 full-width-grid-con">
+                <div class="sub-menu1 full-width-grid-con">
                          <ul class="">
-                             <li><a href="works.html">Zima Rebrand</a></li>
-                             <li><a href="works.html">Kavorka</a></li>
-                             <li><a href="works.html">Trivox</a></li>
+                            <?php
+$query_list = 'SELECT project_id AS procases, project_title FROM projects';
+$results_list = mysqli_query($connect, $query_list);
+
+while ($row_list = mysqli_fetch_array($results_list)) {
+    echo '<li><a href="works.php?id=' . $row_list['procases'] . '">' . $row_list['project_title'] . '</a></li>';
+}
+?>
+                        
+            
                              <li><a href="#beyond">Beyond This Site</a></li>  
                           </ul>
                       </div>
@@ -87,63 +94,66 @@ echo '</pre>';
         </section>
     </div>
     <!-- HERO SECTION -->
-    <section id="work-hero-main" class="grid-con">
-        <h2 class="hidden"> Portfolio Biography</h2>
-       
-       
-        <picture class=" col-span-full">
+     
+    <?php
+echo '
+<section id="work-hero-main" class="grid-con">
+    <h2 class="hidden">Portfolio Biography</h2>
+    <picture class=" col-span-full">
             <source srcset="images/dsk-works-hero.svg" media="(min-width: 1280px)">
             <source srcset="images/tb-works-hero.svg"  media="(min-width: 768px)">
             <source srcset="images/mb-works-hero.svg" >
             <!-- Fallback for browsers that do not support <picture> -->
             <img src="images/mb-works-hero.svg" alt="Responsive image">
         </picture>
-        <div id="completed-work-intro" class=" col-span-full">
-            <h3 class="comp-head">Works Completed</h3>
-            <p class="comp-title">Proect Title </p>
-            <h3 class="comp-sub-title">Zima Rebrand</h3>
-            <p class="comp-sub-head">College deliverable</p>
-           <p class="comp-date"><span>[</span>2023-August<span>]</span></p>
-           <p class="comp-cta">Like What You See? <a href="#contact">Let's Work</a> </p>
+    <div id="completed-work-intro" class="col-span-full">
+        <h3 class="comp-head">Works Completed</h3>
+        <p class="comp-title">Project Title</p>
+        <h3 class="comp-sub-title">' . $row['project_title'] . '</h3>
+        <p class="comp-sub-head">' . $row['client_name'] . '</p>
+        <p class="comp-date"><span>[</span>' . $row['year'] . '-' . $row['month'] . '<span>]</span></p>
+        <p class="comp-cta">Like What You See? <a href="#contact">Let\'s Work</a></p>
+    </div>
+</section>
+<div class="grid-con work-show ws1">
+     <img src="images/zima1.png" alt="gif" class="col-span-full">
+</div>
+<div id="p-info" class="grid-con">
+    <h2 class="col-span-full">Project Info:</h2>
+    <p class="col-span-full">' . $row['project_info_text'] . '</p>
+</div>
+<div class="grid-con work-show ws2">
+     <img src="images/zima1.png" alt="gif" class="col-span-full">
+</div>
+<section id="main-about" class="main-about grid-con">
+    <div class="abt-tab col-span-full ws3">
+        <p class="abt-head w-font">Technology Used:</p>
+        <p class="abt-note">' . $row['tech_name'] . '</p>
+        <div class="grid-con work-show">
+            <img src="images/zima1.png" alt="gif" class="col-span-full">
         </div>
-    </section>
-    <div class="grid-con work-show ws1">
-        <img src="images/zima1.png" alt="gif" class="col-span-full">
     </div>
-    <div id="p-info" class="grid-con">
-        <h2 class="col-span-full">Project Info:</h2>
-        <p class="col-span-full">This project was part of my academic deliverables, where I was tasked with rebranding Zima, a beer energy drink, to enhance its market presence and drive sales. The rebrand focused on developing a fresh, modern identity that resonates with the target audience while positioning the product as a competitive choice in the beverage industry.</p>
-        
+    <div class="abt-tab col-span-full">
+        <p class="abt-head w-font">Collaborations:</p>
+        <p class="abt-note">' . $row['collaboration'] . '</p>
     </div>
-    <div class="grid-con work-show ws2">
-        <img src="images/zima2.png" alt="gif" class="col-span-full">
+    <div class="abt-tab col-span-full">
+        <p class="abt-head w-font">Problem:</p>
+        <p class="abt-note">' . $row['problem_info'] . '</p>
     </div>
-    <!--  -->
-    <section id="main-about" class="main-about grid-con">
-        <!-- tabs -->
-        <div class=" abt-tab col-span-full ws3">
-            <p class="abt-head w-font">Technology Used:</p>
-            <p class="abt-note">html 5, javascript, sass, css, cinema 4d, adobe after effect,adobe photoshop, adobe illustrator, adobe premier pro</p>
-            <div class="grids-con work-show">
-                <img src="images/zima3.png" alt="gif" class="col-spaan-full">
-            </div>
-         </div>
-         <div class=" abt-tab col-span-full">
-            <p class="abt-head w-font">collaborations:</p>
-            <p class="abt-note">html 5, javascript, sass, css, cinema 4d, adobe after effect,adobe photoshop, adobe illustrator, adobe premier pro</p>
-         </div>
-         <div class=" abt-tab col-span-full">
-            <p class="abt-head w-font">Problem:</p>
-            <p class="abt-note">Life driven by curiosity and exploration, constantly seeking to bridge the gap between functionality and aesthetics.</p>
-         </div>
-         <div class=" abt-tab col-span-full">
-            <p class="abt-head w-font">Solution:</p>
-            <p class="abt-note">Life driven by curiosity and exploration, constantly seeking to bridge the gap between functionality and aesthetics.</p>
-         </div>
-     </section>
-     <div class="grid-con work-show">
-        <img src="images/zima-labels.gif" alt="gif" class="col-span-full">
+    <div class="abt-tab col-span-full">
+        <p class="abt-head w-font">Solution:</p>
+        <p class="abt-note">' . $row['solution_info'] . '</p>
     </div>
+</section>
+<div class="grid-con work-show">
+    <img src="images/zima1.png" alt="gif" class="col-span-full">
+</div>';
+?>
+
+
+
+
     <!--  -->
          
             <!-- Beyond Site Section -->
@@ -189,7 +199,7 @@ echo '</pre>';
                     <input type="text" name="email" id="email">
                     <br><br>
                     <label for="comments">Messages: </label>
-                    <textarea name="comments" id="comments">comment here</textarea>
+                    <textarea name="comments" id="comments" placeholder="comment here"></textarea>
                     <br><br>
                     <input type="submit" value="send">
                     </form>
