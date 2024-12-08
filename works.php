@@ -3,7 +3,9 @@
 <?php
 require_once('includes/connect.php');
 
-// To prevent SQL injection.
+
+// Ensure $_GET['id'] is sanitized to prevent SQL injection.
+
 $id = intval($_GET['id']); 
 
 $query = '
