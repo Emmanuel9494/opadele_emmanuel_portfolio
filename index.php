@@ -90,7 +90,7 @@ $results = mysqli_query($connect,$query);
             <!-- Fallback for browsers that do not support <picture> -->
             <img src="images/mb-hero-letter.svg" alt="Responsive image">
         </picture>
-            <div  id="intro-text" class="col-span-full">
+            <div  id="intro-text" class="col-span-full l-col-start-3">
                 <div id="intro-names">
                     <h2 class="first-name">Emmanuel</h2>
                     <h2 class="last-name">Opadele</h2>
@@ -99,10 +99,55 @@ $results = mysqli_query($connect,$query);
                 <p class="intro-bio">My passion merges innovation and technology as I blend creativity with technical skill to craft solutions that are both functional and visually captivating.</p>
                 </div>
 
-                <div  class=" cta-work ">
+                <div  class=" cta-work l-col-start-6">
                     <button class="click-button"><p><a href="">Let's Work</a></p></button>
                 </div>
      </section>
+     <!-- WORKS COMPLETED -->
+     <section id="works" class="grid-con">
+                <h2 class="hidden">Completed Works byEmmanuel Opadele</h2>
+                <h3 class="col-span-full">Work Completed</h3>
+                <?php
+                mysqli_data_seek($results, 0);
+
+while($row = mysqli_fetch_array($results)) {
+   
+    
+$cell=$cell+1;
+/* the modulo operator % returns any remainder of dividing 2 numbers. For even numbers it returns 0 */
+if($cell % 2 > 0) {
+    echo ' <div class="mini-works col-start-1 col-span-2 left m-col-start-1 m-col-span-6">';  
+}else{
+    echo '<div class="mini-works  col-start-3 col-span-2 right m-col-start-7 m-col-span-6" >';
+}
+echo 
+'<img src="images/'.$row['main_images'].'" alt="'.$row['project_title'].'">
+                        <h4>'.$row['project_title'].'</h4>
+                        <p class="tb-works">'.$row['project_info_text'].'</p>
+                        <div  class=" cta-work ">
+                            <button class="click-button"><p><a href="works.php?id=' . $row['procases'] . '">Learn More</a></p></button>
+                        </div>
+                    </div>';
+}
+?>
+                
+                    <!-- <div class="mini-works col-start-1 col-span-2 left m-col-start-1 m-col-span-6">
+                        <img src="images/zima-main-logo.png" alt="Zima Rebrand">
+                        <h4>Zima Rebrand</h4>
+                        <p class="tb-works">This project was part of my academic deliverables, where I was tasked with rebranding Zima, a beer energy drink, to enhance its market presence and drive sales. The rebrand focused on developing a fresh, modern identity that resonates with the target audience while positioning the product as a competitive choice in the beverage industry.</p>
+                        <div  class=" cta-work ">
+                            <button class="click-button"><p><a href="">Learn More</a></p></button>
+                        </div>
+                    </div>
+                    <div class="mini-works  col-start-3 col-span-2 right m-col-start-7 m-col-span-6" >
+                        <img src="images/kavorka-main-logo.png" alt="Kavorka Cosmetics">
+                        <h4>Zima Rebrand</h4>
+                        <p>This project was part of my academic deliverables, where I was tasked with rebranding Zima, a beer energy drink, to enhance its market presence and drive sales. The rebrand focused on developing a fresh, modern identity that resonates with the target audience while positioning the product as a competitive choice in the beverage industry.</p>
+                        <div  class=" cta-work ">
+                            <button class="click-button"><p><a href="">Learn More</a></p></button>
+                        </div>
+                    </div> -->
+               </section>
      <!-- Image Slides -->
       <div id="slider-container" class="grid-con">
       <section id="main-slider" class="col-span-full m-col-span-full">
@@ -173,44 +218,7 @@ $results = mysqli_query($connect,$query);
             <p class="middle-text-switch col-span-full">Developer</p>
             <p class="bottom-text-switch col-span-full">2D / 3D Artist</p>
             </div>
-            <!-- Image Slider 2 -->
-            <div id="slider-container2" class="grid-con">
-                <section id="main-slider2" class="col-span-full m-col-span-full">
-                  <div class="slider2">
-                      <!-- Buttons -->
-                      <div class="slides2 col-span-full m-col-span-full">
-                          <input type="radio" name="radio-btn" id="radio1-2">
-                          <input type="radio" name="radio-btn" id="radio2-2">
-                          <input type="radio" name="radio-btn" id="radio3-2">
-                          <input type="radio" name="radio-btn" id="radio4-2">
-                          <input type="radio" name="radio-btn" id="radio5-2">
-                          <!-- Images -->
-                          <div class="slide2 first">
-                              <img src="images/brand-mockup.png" alt="">
-                          </div>
-                          <div class="slide2">
-                              <img src="images/zima-4-cans.png" alt="">
-                          </div>
-                          <div class="slide2">
-                              <img src="images/c4d-trivox.png" alt="">
-                          </div>
-                          <div class="slide2">
-                              <img src="images/kavorka-ad1.png" alt="">
-                          </div>
-                          <div class="slide2">
-                              <img src="images/cd4-steering.png" alt="">
-                          </div>
-                      </div>
-                      <div class="navigation-manual2 col-span-full">
-                          <label for="radio1-2" class="manual-btn2"></label>
-                          <label for="radio2-2" class="manual-btn2"></label>
-                          <label for="radio3-2" class="manual-btn2"></label>
-                          <label for="radio4-2" class="manual-btn2"></label>
-                          <label for="radio5-2" class="manual-btn2"></label>
-                      </div>
-                  </div>
-                </section>
-                </div>
+            
                  <!--Video Reel Section  -->
         
             <section id="reel-box" class="col-span-4 ">
@@ -251,51 +259,7 @@ $results = mysqli_query($connect,$query);
               <div class="full-width-grid-con">
                 <hr class="col-span-full">
               </div>
-              <!-- WORKS COMPLETED -->
-               <section id="works" class="grid-con">
-                <h2 class="hidden">Completed Works byEmmanuel Opadele</h2>
-                <h3 class="col-span-full">Work Completed</h3>
-                <?php
-                mysqli_data_seek($results, 0);
-
-while($row = mysqli_fetch_array($results)) {
-   
-    
-$cell=$cell+1;
-/* the modulo operator % returns any remainder of dividing 2 numbers. For even numbers it returns 0 */
-if($cell % 2 > 0) {
-    echo ' <div class="mini-works col-start-1 col-span-2 left m-col-start-1 m-col-span-6">';  
-}else{
-    echo '<div class="mini-works  col-start-3 col-span-2 right m-col-start-7 m-col-span-6" >';
-}
-echo 
-'<img src="images/'.$row['main_images'].'" alt="'.$row['project_title'].'">
-                        <h4>'.$row['project_title'].'</h4>
-                        <p class="tb-works">'.$row['project_info_text'].'</p>
-                        <div  class=" cta-work ">
-                            <button class="click-button"><p><a href="works.php?id=' . $row['procases'] . '">Learn More</a></p></button>
-                        </div>
-                    </div>';
-}
-?>
-                
-                    <!-- <div class="mini-works col-start-1 col-span-2 left m-col-start-1 m-col-span-6">
-                        <img src="images/zima-main-logo.png" alt="Zima Rebrand">
-                        <h4>Zima Rebrand</h4>
-                        <p class="tb-works">This project was part of my academic deliverables, where I was tasked with rebranding Zima, a beer energy drink, to enhance its market presence and drive sales. The rebrand focused on developing a fresh, modern identity that resonates with the target audience while positioning the product as a competitive choice in the beverage industry.</p>
-                        <div  class=" cta-work ">
-                            <button class="click-button"><p><a href="">Learn More</a></p></button>
-                        </div>
-                    </div>
-                    <div class="mini-works  col-start-3 col-span-2 right m-col-start-7 m-col-span-6" >
-                        <img src="images/kavorka-main-logo.png" alt="Kavorka Cosmetics">
-                        <h4>Zima Rebrand</h4>
-                        <p>This project was part of my academic deliverables, where I was tasked with rebranding Zima, a beer energy drink, to enhance its market presence and drive sales. The rebrand focused on developing a fresh, modern identity that resonates with the target audience while positioning the product as a competitive choice in the beverage industry.</p>
-                        <div  class=" cta-work ">
-                            <button class="click-button"><p><a href="">Learn More</a></p></button>
-                        </div>
-                    </div> -->
-               </section>
+              
                     <!-- About Section -->
                      <section id="main-about" class="grid-con main-about">
                         <h2 class="col-span-full">About</h2>

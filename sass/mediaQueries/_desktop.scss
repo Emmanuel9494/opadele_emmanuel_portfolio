@@ -5,22 +5,27 @@
 @media screen and (min-width: 1280px) {
    // HERO SECTION
    #hero-main{
+    height: 670px;
     picture{
-      margin-top: -250px;
-      // margin-left: -200px;
+      position: relative;
+      margin-top: -150px;
+      margin-left: -300px;
       z-index: -1;
+      opacity: .3;
       img{
-        width: 80%;
+        width: 35%;
         height: auto;
       }
     }
     // intro-text
     #intro-text{
-      margin-left: 32vw;
-      margin-top: -5vh;
+      margin-left: 60px ;
+      margin-top: -50px;
       #intro-names{
+        position: absolute;
       text-align: left;
-      margin-top: -150px;
+      margin-top: -120px;
+      margin-left: 300px ;
       
           h2{
               font-size: 3vw;
@@ -30,51 +35,32 @@
      }
      h3{
       font-size: 3vw;
-      padding-top: 10px;
+      // padding-top: 10px;
       margin-top: -10px;
+      margin-left: 300px ;
       }
        .intro-bio{
         width: 40vw;
        }
        p{
-        margin-top: 50px;
+        margin-top: 10px;
         letter-spacing: .5px;
        }
     }
     .cta-work{
-      top: 55%;
-      left: 40%;
+      top: 345px;
+      left: 60px;
      .click-button{
         width: 150px;
         font-size: 18px;
      }
     }
   }
-
-  
-  // Experience Section
-#xp-rience{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  .xp-head{
-     font-size: 55px;
-  }
-  .xp-sub-head{
-      font-size: 20px;
-  }
-  .xp-note-container{
-      .xp-note{
-          width: 70%;
-        
-          font-size: 16px;
-      }
-  }
-}
-// Works Completed
+  // Works Completed
 #works{
   margin-top: 20px;
   h3{
-      font-size: 45px;
+      font-size: 30px;
       padding-block: 15px;
   }
   .mini-works{
@@ -88,10 +74,31 @@
   
 }
 
+  
+  // Experience Section
+#xp-rience{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  .xp-head{
+     font-size: 30px;
+  }
+  .xp-sub-head{
+      font-size: 20px;
+  }
+  .xp-note-container{
+      .xp-note{
+          width: 70%;
+        
+          font-size: 16px;
+      }
+  }
+}
+
+
 // about Section
 .main-about{
   h2{
-    font-size: 45px;
+    font-size: 30px;
   }
   .social-logo{
     margin-block: 20px;
@@ -122,7 +129,7 @@
 #beyond{
   margin-top: 40px;
   h2{
-    font-size: 35px;
+    font-size: 20px;
   }
   .icon{
       width: 40px;
@@ -145,13 +152,14 @@
       margin-block-end: 30px;
       @include m.cta-buttons;
       img{
-         max-width: 70%;
+         max-width: 50%;
          height: auto;
          margin: 0 auto;
           
       }
      button{
-     font-size: 14px;
+     font-size: 12px;
+     letter-spacing: 1px;
      }
   }
 }
@@ -163,7 +171,7 @@
       margin-block: 15px;
       text-transform: uppercase;
       font-family: a.$bold-font;
-      font-size: 45px;
+      font-size: 20px;
       justify-self: center;
   }
   .email{
@@ -176,7 +184,7 @@
       justify-self: center;
       text-align: center;
       font-family: a.$body-font;
-      font-size: 18px;
+      font-size: 14px;
       margin-bottom: 15px;
   }
 }
