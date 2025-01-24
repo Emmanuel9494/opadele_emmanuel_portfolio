@@ -6,10 +6,14 @@
 require_once('includes/connect.php');
 
 //create a query to run in SQL
-$query = 'SELECT project_id AS procases, project_title, project_info_text, main_images FROM projects';
+// $query = 'SELECT project_id AS procases, project_title, project_info_text, main_images FROM projects';
+
+$stmt = $connect->prepare("SELECT project_id AS procases, project_title, project_info_text, main_images FROM projects");
+
+$stmt->execute();
 
 //run the query to get back the content
-$results = mysqli_query($connect,$query);
+// $results = mysqli_query($connect,$query);
 ?>
 <head>
         <meta charset="UTF-8">
@@ -56,9 +60,10 @@ $results = mysqli_query($connect,$query);
                     <div class="sub-menu1 full-width-grid-con">
                          <ul class="">
                          <?php
-                            while ($row = mysqli_fetch_array($results)) {
+                            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                                 echo '<li><a href="works.php?id=' . $row['procases'] . '">' . $row['project_title']. '</a></li>';
                             }
+                            $stmt = null;
                         ?>
             
                              <li><a href="#beyond">Beyond This Site</a></li>  
@@ -108,27 +113,31 @@ $results = mysqli_query($connect,$query);
                 <h2 class="hidden">Completed Works byEmmanuel Opadele</h2>
                 <h3 class="col-span-full">Work Completed</h3>
                 <?php
-                mysqli_data_seek($results, 0);
+                // mysqli_data_seek($stmt, 0);
+                $stmt = $connect->prepare("SELECT project_id AS procases, project_title, project_info_text, main_images FROM projects");
 
-while($row = mysqli_fetch_array($results)) {
+                $stmt->execute();
+
+                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
    
     
-$cell=$cell+1;
-/* the modulo operator % returns any remainder of dividing 2 numbers. For even numbers it returns 0 */
-if($cell % 2 > 0) {
-    echo ' <div class="mini-works col-start-1 col-span-2 left m-col-start-1 m-col-span-6">';  
-}else{
-    echo '<div class="mini-works  col-start-3 col-span-2 right m-col-start-7 m-col-span-6" >';
+        $cell=$cell+1;
+        /* the modulo operator % returns any remainder of dividing 2 numbers. For even numbers it returns 0 */
+        if($cell % 2 > 0) {
+            echo ' <div class="mini-works col-start-1 col-span-2 left m-col-start-1 m-col-span-6">';  
+        }else{
+            echo '<div class="mini-works  col-start-3 col-span-2 right m-col-start-7 m-col-span-6" >';
+        }
+        echo 
+        '<img src="images/'.$row['main_images'].'" alt="'.$row['project_title'].'">
+                                <h4>'.$row['project_title'].'</h4>
+                                <p class="tb-works">'.$row['project_info_text'].'</p>
+                                <div  class=" cta-work ">
+                                    <button class="click-button"><p><a href="works.php?id=' . $row['procases'] . '">Learn More</a></p></button>
+                                </div>
+                            </div>';
 }
-echo 
-'<img src="images/'.$row['main_images'].'" alt="'.$row['project_title'].'">
-                        <h4>'.$row['project_title'].'</h4>
-                        <p class="tb-works">'.$row['project_info_text'].'</p>
-                        <div  class=" cta-work ">
-                            <button class="click-button"><p><a href="works.php?id=' . $row['procases'] . '">Learn More</a></p></button>
-                        </div>
-                    </div>';
-}
+$stmt = null;
 ?>
                 
                     <!-- <div class="mini-works col-start-1 col-span-2 left m-col-start-1 m-col-span-6">

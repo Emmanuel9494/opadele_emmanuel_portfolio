@@ -5,12 +5,20 @@ require_once('includes/connect.php');
 
 
 $query = 'SELECT projects.project_id AS procases, project_title, client_name, year, month, GROUP_CONCAT(DISTINCT multimedia.media_name) AS images, 
-    project_info_text, GROUP_CONCAT(DISTINCT technologies.tech_name) AS tech_name, collaboration, solution_info, problem_info FROM multimedia, projects, projects_techs, technologies WHERE projects.project_id = multimedia.project_id AND projects.project_id = projects_techs.project_id AND technologies.tech_id = projects_techs.tech_id AND projects.project_id = ' . $_GET['id'] . ' GROUP BY projects.project_id';
+    project_info_text, GROUP_CONCAT(DISTINCT technologies.tech_name) AS tech_name, collaboration, solution_info, problem_info FROM multimedia, projects, projects_techs, technologies WHERE projects.project_id = multimedia.project_id AND projects.project_id = projects_techs.project_id AND technologies.tech_id = projects_techs.tech_id AND projects.project_id = :project_id GROUP BY projects.project_id';
 
 
-$results = mysqli_query($connect, $query);
+// $results = mysqli_query($connect, $query);
+$stmt = $connect->prepare($query);
+$project_id = $_GET['id'];
+$stmt->bindParam(':project_id', $project_id , PDO::PARAM_INT);
 
-$row = mysqli_fetch_assoc($results);
+$stmt->execute();
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+$stmt = null;
+
+// $row = mysqli_fetch_assoc($results);
 
 $image_array = explode(',', $row['images']);
 
@@ -66,10 +74,15 @@ $image_array = explode(',', $row['images']);
                 <div class="sub-menu1 full-width-grid-con">
                          <ul class="">
                             <?php
-$query_list = 'SELECT project_id AS procases, project_title FROM projects';
-$results_list = mysqli_query($connect, $query_list);
+// $query_list = 'SELECT project_id AS procases, project_title FROM projects';
+// $results_list = mysqli_query($connect, $query_list);
 
-while ($row_list = mysqli_fetch_array($results_list)) {
+$stmt2 = $connect->prepare("SELECT project_id AS procases, project_title FROM projects");
+
+$stmt2->execute();
+
+// while ($row_list = mysqli_fetch_array($results_list)) {
+    while ($row_list = $stmt2->fetch(PDO::FETCH_ASSOC)) {
     echo '<li><a href="works.php?id=' . $row_list['procases'] . '">' . $row_list['project_title'] . '</a></li>';
 }
 ?>
