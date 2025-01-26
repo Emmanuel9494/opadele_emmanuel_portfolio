@@ -1,7 +1,5 @@
 import { introAnimation } from './animation.js';
-
 introAnimation();
-
 
 (function () {
   // Check if the current page is 'index.php'
@@ -712,4 +710,4 @@ selectors.forEach((selector, i) => {
   
   gsap.ticker.lagSmoothing(0)
 })();
-// Nothing comes After line 700...its time to push and go head on with PHP. 
+// Nothing comes After line 700. i lied..its time to push and go head on with PHP. 

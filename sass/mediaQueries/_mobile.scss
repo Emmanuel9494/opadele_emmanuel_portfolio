@@ -2,6 +2,8 @@
 @use "../abstracts/mixins" as m;
 @use "../components/introAnimation";
 @use "../components/submittionPage";
+@use "../components/product_list";
+@use "../components/edit_project_form";
 html{
     overflow-x: hidden;
     scrollbar-width: thin; /* For Firefox */
