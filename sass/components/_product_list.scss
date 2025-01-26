@@ -1,0 +1,45 @@
+@use "../abstracts" as a;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/colors"  as c; 
+@use "../abstracts/fonts"  as f;  
+.project-list{
+    // display: none;
+    color:a.$white; 
+    display: block;
+    margin: auto;
+}
+.project-list img{
+    max-width: 5%;
+    height: auto;
+}
+h3{
+    color: a.$white;
+    font-family: f.$body-font;
+    text-align: center;
+    font-size: 25px;
+}
+.cta-project button{
+    background-color: c.$red;
+        font-family: f.$body-font;
+        cursor: pointer;
+        color: c.$white;
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+        overflow: hidden; 
+        background-size: 200% 100%; 
+        background-position: 100% bottom; 
+        transition: background-color .5s ease-in-out; 
+        padding: 5px;
+       
+}
+button:hover{
+    background-position: 100% bottom;
+    // border: 1px solid c.$white; 
+    transition: border 1s ease-in-out, background-color 0.2s ease-in-out;
+    background-color: #e500008e;
+}
+.try{
+    // display: flex;
+    flex-wrap: wrap;
+}
