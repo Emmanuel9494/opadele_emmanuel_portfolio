@@ -202,18 +202,20 @@ echo '
 
                     <form method="post" action="sendmail.php">
                     <label for="first_name">First Name: </label>
-                    <input type="text" name="first_name" id="first_name">
+                    <input type="text" name="first_name" id="first_name" required>
                     <br><br>
                     <label for="last_name">Last Name: </label>
-                    <input type="text" name="last_name" id="last_name">
+                    <input type="text" name="last_name" id="last_name" required>
                     <br><br>
                     <label for="email">Email: </label>
-                    <input type="text" name="email" id="email">
+                    <input type="text" name="email" id="email" required>
                     <br><br>
                     <label for="comments">Messages: </label>
-                    <textarea name="comments" id="comments" placeholder="comment here"></textarea>
+                    <textarea name="comments" id="comments" placeholder="comment here" required></textarea>
                     <br><br>
                     <input type="submit" value="send">
+                    <br><br>
+                    <section id="feedback"><p>*Please fill out all required sections</p></section>
                     </form>
 
                     </div>  
