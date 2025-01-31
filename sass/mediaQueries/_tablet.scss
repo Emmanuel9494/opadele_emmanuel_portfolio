@@ -11,14 +11,14 @@
     picture{
       margin-top: -30px;
       z-index: -1;
-      opacity: .3;
+    //   opacity: .3;
       img{
         width: 80%;
       }
     }
     // intro-text
     #intro-text{
-      margin-left: 30vw;
+      margin-left: 32vw;
       margin-top: -2vh;
       #intro-names{
       text-align: left;
@@ -109,6 +109,7 @@
 // Works Completed
 #works{
   margin-top: 20px;
+  background-color: a.$white;
   h3{
       font-size: 20px;
       padding-block: 15px;

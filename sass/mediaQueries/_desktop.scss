@@ -7,22 +7,24 @@
 @media screen and (min-width: 1280px) {
    // HERO SECTION
    #hero-main{
-    height: 670px;
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
     picture{
       position: relative;
       margin-top: -150px;
-      margin-left: -300px;
+      // margin-left: -300px;
       z-index: -1;
-      opacity: .3;
+      // justify-items: center;
       img{
-        width: 35%;
+        width: 55%;
         height: auto;
       }
     }
     // intro-text
     #intro-text{
-      margin-left: 60px ;
-      margin-top: -50px;
+      margin-left: 10px ;
+      margin-top: 70px;
       #intro-names{
         position: absolute;
       text-align: left;
@@ -42,7 +44,10 @@
       margin-left: 300px ;
       }
        .intro-bio{
-        width: 40vw;
+        width: 20vw;
+        justify-items: center;
+        text-align: left;
+        margin-left: 300px;
        }
        p{
         margin-top: 10px;
@@ -51,7 +56,7 @@
     }
     .cta-work{
       top: 345px;
-      left: 60px;
+      left: 260px;
      .click-button{
         width: 150px;
         font-size: 18px;
@@ -60,10 +65,12 @@
   }
   // Works Completed
 #works{
-  margin-top: 20px;
+  // margin-top: 20px;
+  background-color: rgb(255, 255, 255);
   h3{
       font-size: 30px;
       padding-block: 15px;
+      color: a.$black;
   }
   .mini-works{
       margin-bottom: 35px;
@@ -73,9 +80,27 @@
         height: auto;
       }     
   }
+.tb-works{
+  width: 50%;
+}
   
 }
 
+  // BRAND NAME AND TEXT SWITCHING
+  #brand-name{
+    .f-named{
+      margin-left: 95px;
+        width: 15px;
+        font-size: 16px;
+        line-height: 38px;  
+    }
+    .l-named{
+        width: 15px;
+        font-size: 16px;
+        line-height: 40px;
+       
+    }
+  }
   
   // Experience Section
 #xp-rience{
