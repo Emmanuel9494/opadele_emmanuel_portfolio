@@ -67,14 +67,10 @@
         @media screen and (min-width: 1280px) {
             margin-left: 30vw;
             display: flex;
-            flex-direction: column;
-            align-items: baseline;
-            left: 670px;
-            top: 150px;
+            bottom: -40px;
             width: 60px;
-            height: 60px;
             height: 250px;
-            justify-content: space-around;
+            align-items: flex-end;
         }
 
         .manual-btn{

@@ -104,8 +104,8 @@ $stmt->execute();
                 <p class="intro-bio">My passion merges innovation and technology as I blend creativity with technical skill to craft solutions that are both functional and visually captivating.</p>
                 </div>
 
-                <div  class=" cta-work l-col-start-6">
-                    <button class="click-button"><p><a href="">Let's Work</a></p></button>
+                <div  class=" cta-work l-col-start-6 btn-scroll">
+                <button class="click-button btn-scroll" data-target="#contact">Let's Work</button>
                 </div>
      </section>
      <!-- WORKS COMPLETED -->
@@ -139,23 +139,6 @@ $stmt->execute();
 }
 $stmt = null;
 ?>
-                
-                    <!-- <div class="mini-works col-start-1 col-span-2 left m-col-start-1 m-col-span-6">
-                        <img src="images/zima-main-logo.png" alt="Zima Rebrand">
-                        <h4>Zima Rebrand</h4>
-                        <p class="tb-works">This project was part of my academic deliverables, where I was tasked with rebranding Zima, a beer energy drink, to enhance its market presence and drive sales. The rebrand focused on developing a fresh, modern identity that resonates with the target audience while positioning the product as a competitive choice in the beverage industry.</p>
-                        <div  class=" cta-work ">
-                            <button class="click-button"><p><a href="">Learn More</a></p></button>
-                        </div>
-                    </div>
-                    <div class="mini-works  col-start-3 col-span-2 right m-col-start-7 m-col-span-6" >
-                        <img src="images/kavorka-main-logo.png" alt="Kavorka Cosmetics">
-                        <h4>Zima Rebrand</h4>
-                        <p>This project was part of my academic deliverables, where I was tasked with rebranding Zima, a beer energy drink, to enhance its market presence and drive sales. The rebrand focused on developing a fresh, modern identity that resonates with the target audience while positioning the product as a competitive choice in the beverage industry.</p>
-                        <div  class=" cta-work ">
-                            <button class="click-button"><p><a href="">Learn More</a></p></button>
-                        </div>
-                    </div> -->
                </section>
      <!-- Image Slides -->
       <div id="slider-container" class="grid-con">
@@ -282,15 +265,18 @@ $stmt = null;
                         <!-- tabs -->
                         <div class=" abt-tab col-span-full">
                             <p class="abt-head">Who Am I?</p>
-                            <p class="abt-note">My passion merges innovation and technology as I blend creativity with technical skill to craft solutions that are both functional and visually captivating.</p>
+                            <br>
+                            <p class="abt-note">My passion merges innovation and technology as I blend creativity with technical skill to craft solutions that are both functional and visually captivating. I am a passionate developer and designer with a deep love for interactive media and gaming. With a focus on bridging creativity and strategy, I specialize in Interactive Media Design, crafting engaging digital experiences that blend design aesthetics with innovative solutions. Whether it's in advertising, digital media, or game design, I thrive on creating impactful and interactive experiences that resonate with users and drive results.</p>
                          </div>
                          <div class=" abt-tab col-span-full">
                             <p class="abt-head">Certificates</p>
-                            <p class="abt-note">In Progress...</p>
+                            <br>
+                            <p class="abt-note">Diploma In Interactive Media Design<br>Diploma In Interactive Media Design</p>
                          </div>
                          <div class=" abt-tab col-span-full">
                             <p class="abt-head">Lifestyle</p>
-                            <p class="abt-note">Life driven by curiosity and exploration, constantly seeking to bridge the gap between functionality and aesthetics.</p>
+                            <br>
+                            <p class="abt-note">Life driven by curiosity and exploration, constantly seeking to bridge the gap between functionality and aesthetics. When I'm not coding or designing, you will find me immersed in the world of PC gaming, capturing moments through photography, or seeking new adventures—whether outdoors or curled up indoors. I have a soft spot for the color red and an undeniable love for food, always on the lookout for new flavors to savor. Life's all about balance, and I enjoy embracing both the thrill of exploration and the comfort of home.</p>
                          </div>
                      </section>
             <!-- Beyond Site Section -->
@@ -353,10 +339,12 @@ $stmt = null;
                 <p class="col-span-full advance trig-adv">Thanks in Advance</p>
                 <p class="col-span-full footer-note">Disclaimer: The works and projects on this site are for portfolio purposes only and may not reflect current availability or pricing. Trademarks and brands mentioned belong to their respective owners. For collaborations or inquiries, please contact me directly.</p>
                 <div  class=" social-logo col-span-full">
-                    <img src="images/fb-logo.svg" alt="Emmanuel's Facebook Page">
-                    <img src="images/insta-logo.svg" alt="Emmanuel's Instagram Page">
-                    <img src="images/x-logo.svg" alt="Emmanuel's x Page">
-                    <img src="images/linkdin-logo.svg" alt="Emmanuel's Linkden Page">
+                    <a href="https://www.instagram.com/olak_crola/#" target="_blank">
+                        <img src="images/insta-logo.svg" alt="Emmanuel's Instagram Page">
+                    </a>
+                    <a href="https://www.linkedin.com/in/emmanuel-opadele-85b902289/" target="_blank">
+                        <img src="images/linkdin-logo.svg" alt="Emmanuel's LinkedIn Page">
+                    </a>
                 </div>
                 <p class="col-span-full rights">©2024 Emmanuel Opadele<br>All Rights Reserved—Privacy Policy.</p>
                 <p class="col-span-full dand">[ . Developer And Designer .]</p>

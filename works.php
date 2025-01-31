@@ -227,10 +227,12 @@ echo '
                 <p class="col-span-full advance trig-adv">Thanks in Advance</p>
                 <p class="col-span-full footer-note">Disclaimer: The works and projects on this site are for portfolio purposes only and may not reflect current availability or pricing. Trademarks and brands mentioned belong to their respective owners. For collaborations or inquiries, please contact me directly.</p>
                 <div  class=" social-logo col-span-full">
-                    <img src="images/fb-logo.svg" alt="Emmanuel's Facebook Page">
-                    <img src="images/insta-logo.svg" alt="Emmanuel's Instagram Page">
-                    <img src="images/x-logo.svg" alt="Emmanuel's x Page">
-                    <img src="images/linkdin-logo.svg" alt="Emmanuel's Linkden Page">
+                    <a href="https://www.instagram.com/olak_crola/#" target="_blank">
+                        <img src="images/insta-logo.svg" alt="Emmanuel's Instagram Page">
+                    </a>
+                    <a href="https://www.linkedin.com/in/emmanuel-opadele-85b902289/" target="_blank">
+                        <img src="images/linkdin-logo.svg" alt="Emmanuel's LinkedIn Page">
+                    </a>
                 </div>
                 <p class="col-span-full rights">©2024 Emmanuel Opadele<br>All Rights Reserved—Privacy Policy.</p>
                 <p class="col-span-full dand">[ . Developer And Designer .]</p>
