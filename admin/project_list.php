@@ -29,7 +29,7 @@ $stmt->execute();
 
          <!-- Mobile Menu Icon -->
          <div class="container-mobile-top-logo no-use2 col-start-1 col-span-1">
-             <img src="images/mobile-menu-icon.svg" alt="menu">
+             <img src="../images/mobile-menu-icon.svg" alt="menu">
          </div>
 
         <!-- Mobile Logo -->
@@ -53,7 +53,9 @@ $stmt->execute();
         </section>
     </div>
 <div class="grid-con">
-  <div class="try col-span-full grid-con">
+  <div class="try col-span-full grid-con"></div>
+</div>
+    <br><br><br>
 <?php
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -83,7 +85,7 @@ $stmt = null;
 </div>
 <br><br><br>
 <h3>Add a New Project</h3>
-<form action="add_project.php" method="post">
+<form action="add_project.php" method="post" enctype="multipart/form-data">
     <label for="project_title">Project Title: </label>
     <input name="project_title" type="text" required><br><br>
     <label for="main_images">Main Image: </label>

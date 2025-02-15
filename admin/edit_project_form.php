@@ -30,7 +30,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
          <!-- Mobile Menu Icon -->
          <div class="container-mobile-top-logo no-use2 col-start-1 col-span-1">
-             <img src="images/mobile-menu-icon.svg" alt="menu">
+             <img src="../images/mobile-menu-icon.svg" alt="menu">
          </div>
 
         <!-- Mobile Logo -->
