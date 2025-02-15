@@ -20,3 +20,5 @@ import { smoothScroll } from './smooth_scroll.js';
 smoothScroll();
 import { aboutInfo } from './about_info.js';
 aboutInfo();
+import { sendMail } from './send_mail.js';
+sendMail();
