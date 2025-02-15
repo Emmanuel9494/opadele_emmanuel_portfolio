@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
+session_start();
+
+// CSRF token check or creation
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 require_once('includes/connect.php');
 
 
@@ -74,8 +80,8 @@ $image_array = explode(',', $row['images']);
                 <div class="sub-menu1 full-width-grid-con">
                          <ul class="">
                             <?php
-// $query_list = 'SELECT project_id AS procases, project_title FROM projects';
-// $results_list = mysqli_query($connect, $query_list);
+        // $query_list = 'SELECT project_id AS procases, project_title FROM projects';
+        // $results_list = mysqli_query($connect, $query_list);
 
 $stmt2 = $connect->prepare("SELECT project_id AS procases, project_title FROM projects");
 
@@ -200,23 +206,34 @@ echo '
                 <!-- Contact form -->
                 <div class="col-span-full">
 
-                    <form method="post" action="sendmail.php">
-                    <label for="first_name">First Name: </label>
-                    <input type="text" name="first_name" id="first_name" required>
-                    <br><br>
-                    <label for="last_name">Last Name: </label>
-                    <input type="text" name="last_name" id="last_name" required>
-                    <br><br>
-                    <label for="email">Email: </label>
-                    <input type="text" name="email" id="email" required>
-                    <br><br>
-                    <label for="comments">Messages: </label>
-                    <textarea name="comments" id="comments" placeholder="comment here" required></textarea>
-                    <br><br>
-                    <input type="submit" value="send">
-                    <br><br>
-                    <section id="feedback"><p>*Please fill out all required sections</p></section>
-                    </form>
+                <form id="contactForm">
+    <!-- CSRF  (Cross-Site Request Forgery) Token -->
+    <!-- CSRF is an attack where a malicious website tricks a logged-in user into performing unwanted actions on another site. -->
+    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+    <!-- The CSRF token is created when the session is started (session_start()) and stored in the $_SESSION['csrf_token'] variable.
+    The token is then injected into the form as a hidden input field. -->
+
+    <label for="first_name">First Name: </label>
+    <input type="text" name="first_name" id="first_name">
+    <br><br>
+    
+    <label for="last_name">Last Name: </label>
+    <input type="text" name="last_name" id="last_name">
+    <br><br>
+    
+    <label for="email">Email: </label>
+    <input type="text" name="email" id="email">
+    <br><br>
+    
+    <label for="comments">Messages: </label>
+    <textarea name="comments" id="comments" placeholder="comment here"></textarea>
+    <br><br>
+    
+    <input type="submit" value="Send">
+    <br><br>
+    
+    <section id="feedback"><p>*Please fill out all required sections</p></section>
+</form>
 
                     </div>  
               </section>

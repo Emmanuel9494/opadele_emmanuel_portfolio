@@ -1,0 +1,54 @@
+export function sendMail() {
+    const form = document.querySelector("#contactForm");
+    const feedBack = document.querySelector("#feedback");
+
+    function regForm(event) {
+        event.preventDefault();
+        const thisform = event.currentTarget;
+        const url = "sendmail.php";
+
+        // Get form data including CSRF token
+        // CSRF is an attack where a malicious website tricks a logged-in user into performing unwanted actions on another site.
+        const formdata = new URLSearchParams(new FormData(thisform));
+        // new FormData(thisform) collects all form fields (including CSRF token).
+        // new URLSearchParams() converts form data into a URL-encoded format, suitable for application/x-www-form-urlencoded.
+
+        fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-type": "application/x-www-form-urlencoded"
+            },
+            body: formdata
+        })
+        .then(response => response.json())
+        .then(response => {
+            feedBack.innerHTML = "";
+            if (response.errors) {
+                response.errors.forEach(error => {
+                    const errorElement = document.createElement("p");
+                    errorElement.textContent = error;
+                    feedBack.appendChild(errorElement);
+                });
+            } else {
+                form.reset();
+                const messageElement = document.createElement("p");
+                messageElement.textContent = response.message;
+                feedBack.appendChild(messageElement);
+
+                // Redirect if a redirect URL is provided
+                if (response.redirect) {
+                    setTimeout(() => {
+                        window.location.href = response.redirect;
+                    }, 1000); // Redirect after 2 seconds
+                }
+            }
+            feedBack.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        })
+        .catch(error => {
+            console.log(error);
+            feedBack.innerHTML = "<p>Whoops, something went wrong. Please try again.</p>";
+        });
+    }
+
+    form.addEventListener("submit", regForm);
+}
