@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
+session_start();
+if(!isset($_SESSION['username'])){
+  header('Location: login_form.php');
+}
 require_once('../includes/connect.php');
 $query = 'SELECT * FROM projects WHERE projects.project_id = :projectid';
 $stmt = $connect->prepare($query);
@@ -47,7 +51,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 				
             </ul>
         </div>
-        <!-- Resume button  -->
+        <!-- back button  -->
         <div id="cv-resume" class="no-use l-col-start-8 l-col-span-2 m-col-start-8 m-col-span-2">
             <button><p> <button><p><a href="project_list.php">Go Back</a></p></button></p></button>
         </div>
@@ -60,7 +64,12 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
     <label for="project_title">Project Title: </label>
     <input name="project_title" type="text" value="<?php echo $row['project_title']; ?>" required><br><br>
     <label for="main_images">Main Image: </label>
-    <input name="main_images" type="text" value="<?php echo $row['main_images']; ?>" required><br><br>
+    <input name="main_images" type="file" required>
+<!-- Echoing already existing file name -->
+    <?php if (!empty($row['main_images'])): ?>
+    <span><?php echo basename($row['main_images']); ?></span>
+    <input type="hidden" name="existing_main_image" value="<?php echo $row['main_images']; ?>">
+    <?php endif; ?><br><br>
     <label for="client_name">Client Name: </label>
     <input name="client_name" type="text" value="<?php echo $row['client_name']; ?>" required><br><br>
     <label for="collaboration">Collaboration: </label>
@@ -74,7 +83,20 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
     <label for="year">Year: </label>
     <input name="year" type="number" value="<?php echo $row['year']; ?>" required><br><br>
     <label for="month">Month: </label>
-    <input name="month" type="text" value="<?php echo $row['month']; ?>" required><br><br>
+    <select name="month" required>
+        <option value="January" <?php echo ($row['month'] == 'January') ? 'selected' : ''; ?>>January</option>
+        <option value="February" <?php echo ($row['month'] == 'February') ? 'selected' : ''; ?>>February</option>
+        <option value="March" <?php echo ($row['month'] == 'March') ? 'selected' : ''; ?>>March</option>
+        <option value="April" <?php echo ($row['month'] == 'April') ? 'selected' : ''; ?>>April</option>
+        <option value="May" <?php echo ($row['month'] == 'May') ? 'selected' : ''; ?>>May</option>
+        <option value="June" <?php echo ($row['month'] == 'June') ? 'selected' : ''; ?>>June</option>
+        <option value="July" <?php echo ($row['month'] == 'July') ? 'selected' : ''; ?>>July</option>
+        <option value="August" <?php echo ($row['month'] == 'August') ? 'selected' : ''; ?>>August</option>
+        <option value="September" <?php echo ($row['month'] == 'September') ? 'selected' : ''; ?>>September</option>
+        <option value="October" <?php echo ($row['month'] == 'October') ? 'selected' : ''; ?>>October</option>
+        <option value="November" <?php echo ($row['month'] == 'November') ? 'selected' : ''; ?>>November</option>
+        <option value="December" <?php echo ($row['month'] == 'December') ? 'selected' : ''; ?>>December</option>
+    </select><br><br>
     <br>
     <input name="submit" type="submit" value="Edit">
 </form>

@@ -2,6 +2,11 @@
 <html lang="en">
 
 <?php
+session_start();
+if(!isset($_SESSION['username'])){
+  header('Location: login_form.php');
+}
+
 require_once('../includes/connect.php');
 $stmt = $connect->prepare('SELECT project_id AS procases, project_title, main_images, client_name, collaboration, problem_info, solution_info, project_info_text, year, month FROM projects ORDER BY project_id ASC');
 
@@ -88,26 +93,78 @@ $stmt = null;
 <form action="add_project.php" method="post" enctype="multipart/form-data">
     <label for="project_title">Project Title: </label>
     <input name="project_title" type="text" required><br><br>
+
     <label for="main_images">Main Image: </label>
-    <input name="main_images" type="text" required><br><br>
+    <input name="main_images" type="file" required><br><br>
+
     <label for="client_name">Client Name: </label>
     <input name="client_name" type="text" required><br><br>
+
     <label for="collaboration">Collaboration: </label>
     <textarea name="collaboration" required></textarea><br><br>
+
     <label for="problem_info">Problem Info: </label>
     <textarea name="problem_info" required></textarea><br><br>
+
     <label for="solution_info">Solution Info: </label>
     <textarea name="solution_info" required></textarea><br><br>
+
     <label for="project_info_text">Project Information: </label>
     <textarea name="project_info_text" required></textarea><br><br>
+
     <label for="year">Year: </label>
     <input name="year" type="number" required><br><br>
+
     <label for="month">Month: </label>
-    <input name="month" type="text" required><br><br><br><br>
-    <br>
+    <select name="month" required>
+        <option value="" disabled selected>Select a month</option>
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+    </select>
+    <br><br>
+
+    <h3>Select Technologies for the Project</h3>
+    <br><br>
+
+<div id="techList">
+    <?php
+    // Fetch existing technologies
+    $query = 'SELECT tech_id, tech_name FROM technologies';
+    $result = $connect->query($query);
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+        echo '<label><input type="checkbox" name="tech_ids[]" value="' . $row['tech_id'] . '"> ' . $row['tech_name'] . '</label><br>';
+    }
+    ?>
+</div><br><br>
+
+    <h3>Upload 3 Images for Multimedia Table</h3>
+    <br><br>
+    <label for="image1">Image 1:</label>
+    <input type="file" name="images[]" accept="image/*" required><br>
+
+    <label for="image2">Image 2:</label>
+    <input type="file" name="images[]" accept="image/*" required><br>
+
+    <label for="image3">Image 3:</label>
+    <input type="file" name="images[]" accept="image/*" required><br><br>
+
     <input name="submit" type="submit" value="Add">
 </form>
-<br><br><br>
-<br><br><br>
+
+
+
+    <br><br><br>
+    <br><br><br>
+    
 </body>
 </html>
