@@ -1,6 +1,6 @@
 // CUSTOM VIDEO
 export  function customVideo() {
-    if (window.location.pathname.includes('index.php')) {
+    if (window.location.pathname.includes('main_home.php')) {
         const player = document.querySelector('video');
         const videoControls = document.querySelector('#video-controls');
         const playerButton = document.querySelector('#play-button');

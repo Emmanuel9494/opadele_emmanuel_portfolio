@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-session_start();
-
-// CSRF token check or creation
-if (empty($_SESSION['csrf_token'])) {
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-}
  $cell=0;
 //connect to the running database server and the specific database
-require_once('includes/connect.php');
+require_once('includes/connect_local.php');
 
 //create a query to run in SQL
 // $query = 'SELECT project_id AS procases, project_title, project_info_text, main_images FROM projects';
@@ -53,7 +47,7 @@ $stmt->execute();
 
         <!-- Mobile Logo -->
         <div class="mobilie-top-logo no-use2 col-start-2 col-span-2 m-col-start-4">
-         <a href="intro.html">
+         <a href="index.html">
              <img src="images/red-Logo.svg" alt="menu">
          </a>
       </div>
@@ -61,7 +55,7 @@ $stmt->execute();
         <!-- Header Navigation -->
         <div id="head-nav" class=" mb-nav l-col-start-3 l-col-span-5 m-col-start-3 m-col-end-10">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="main_home.php">Home</a></li>
 				<li id="work-select" class="arrow-icon"><a href="#">Works</a>
                     <div class="sub-menu1 full-width-grid-con">
                          <ul class="">
@@ -262,11 +256,13 @@ $stmt = null;
                      <section id="main-about" class="grid-con main-about">
                         <h2 class="col-span-full">About</h2>
                         <div  class=" social-logo col-span-full">
-                            <img src="images/fb-logo.svg" alt="Emmanuel's Facebook Page">
-                            <img src="images/insta-logo.svg" alt="Emmanuel's Instagram Page">
-                            <img src="images/x-logo.svg" alt="Emmanuel's x Page">
-                            <img src="images/linkdin-logo.svg" alt="Emmanuel's Linkden Page">
-                        </div>
+                    <a href="https://www.instagram.com/olak_crola/#" target="_blank">
+                        <img src="images/insta-logo.svg" alt="Emmanuel's Instagram Page">
+                    </a>
+                    <a href="https://www.linkedin.com/in/emmanuel-opadele-85b902289/" target="_blank">
+                        <img src="images/linkdin-logo.svg" alt="Emmanuel's LinkedIn Page">
+                    </a>
+                </div>
                         <p class="col-span-full">[ . Full Stack Dev. Creator. Visual Engineer .] <br> Let's Work!</p>
                         <!-- tabs -->
                         <div class=" abt-tab col-span-full">
@@ -317,12 +313,7 @@ $stmt = null;
                 <!-- Contact form -->
                 <div class="col-span-full">
 
-                <form id="contactForm">
-    <!-- CSRF  (Cross-Site Request Forgery) Token -->
-    <!-- CSRF is an attack where a malicious website tricks a logged-in user into performing unwanted actions on another site. -->
-    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
-    <!-- The CSRF token is created when the session is started (session_start()) and stored in the $_SESSION['csrf_token'] variable.
-    The token is then injected into the form as a hidden input field. -->
+     <form id="contactForm">
 
     <label for="first_name">First Name: </label>
     <input type="text" name="first_name" id="first_name">

@@ -1,5 +1,4 @@
 <?php
-    session_start();
     header("Access-Control-Allow-Origin: *");
     header("Content-Type: application/json; charset=UTF-8");
 
@@ -17,13 +16,6 @@
         ]);
     } catch (PDOException $e) {
         die(json_encode(["error" => "Database connection failed."]));
-    }
-
-    // Check CSRF token
-    if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
-            die(json_encode(["error" => "CSRF token validation failed."]));
-        }
     }
 
     // Gather and sanitize the form content
@@ -59,13 +51,14 @@
     ]);
     // localhost cant process sendmail, so even if the form submits succefully, it will still print an error
     // Send an email notification
-    // $to = 'olatopmide@gmail.com';
+    // $to = 'contact@emmanuelopadele.com';
     // $subject = 'Message from your Portfolio site!';
     // $message = "You have received a new contact form submission:\n\n";
     // $message .= "Name: $fname $lname\n";
     // $message .= "Email: $email\n\n";
     // $message .= "Message: $msg\n\n";
     // mail($to, $subject, $message);
+
     // Suppress errors and handle mail sending failure manually
     // if (@mail($to, $subject, $message)) {
     //     echo json_encode(["message" => "Form submitted successfully. Thank you for your interest!"]);
@@ -73,8 +66,6 @@
     //     echo json_encode(["error" => "Failed to send email."]);
     // }
 
-    // Regenerate CSRF token after form submission
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
     // Send success response with redirect URL
     echo json_encode(["message" => "Form submitted successfully. Thank you for your interest!", "redirect" => "submit.php"]);

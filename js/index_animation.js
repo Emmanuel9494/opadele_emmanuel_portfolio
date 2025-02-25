@@ -1,6 +1,6 @@
-export  function introAnimation() {
+export  function indexAnimation() {
    // Intro Animation
-   if (window.location.pathname.includes("intro.html")){
+   if (window.location.pathname.includes("index.html")){
 
     const t1 = gsap.timeline();
 
@@ -51,7 +51,7 @@ export  function introAnimation() {
       );
 
       function animation2done(){
-        window.location.href = "index.php";
+        window.location.href = "main_home.php";
 
       }
     
