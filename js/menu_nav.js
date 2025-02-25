@@ -1,6 +1,6 @@
 export  function menuNav() {
     // Check if the current page is 'index.php'
-    if (window.location.pathname.includes("index.php") || (window.location.pathname.includes("works.php"))){
+    if (window.location.pathname.includes("main_home.php") || (window.location.pathname.includes("works.php"))){
   
         console.log("JAVA SCRIPT RUNNING!");
         

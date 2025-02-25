@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-require_once('includes/connect.php');
+require_once('includes/connect_local.php');
 ?>
 <head>
         <meta charset="UTF-8">
@@ -33,11 +33,11 @@ require_once('includes/connect.php');
             <img src="images/mb-submit.svg" alt="Responsive image">
         </picture>
         <div id="submit-content" class="grid-con">
-            <a href="intro.html" class="im1 col-span-full"><img src="images/red-Logo.svg" alt="brand Logo" ></a>
+            <a href="index.html" class="im1 col-span-full"><img src="images/red-Logo.svg" alt="brand Logo" ></a>
             <h2 class="greet1 col-span-full">- Aw'fr - Hi - Hola - Bawo - Salut - Nǐ hǎo -  </h2>
             <p class="greet2 col-span-full">You Made It Here!!!  </p>
             <p class="greet3 col-span-full">Thanks for hitting submit! Your form is off on its adventure through the digital realm. <br>Hold tight - we'll take it from here!</p>
-            <a href="index.php" class="im2 col-span-full"><img src="images/close-icon.svg" alt="close-icon" ></a>
+            <a href="main_home.php" class="im2 col-span-full"><img src="images/close-icon.svg" alt="close-icon" ></a>
             <p class="greet4 col-span-full">[ .Developer And Designer. ] <br>See You Soon!</p>
         </div>
     </section> 

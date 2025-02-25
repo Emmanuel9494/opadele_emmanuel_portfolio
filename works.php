@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-session_start();
-
-// CSRF token check or creation
-if (empty($_SESSION['csrf_token'])) {
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-}
-require_once('includes/connect.php');
+require_once('includes/connect_local.php');
 
 
 $query = 'SELECT projects.project_id AS procases, project_title, client_name, year, month, GROUP_CONCAT(DISTINCT multimedia.media_name) AS images, 
@@ -67,7 +61,7 @@ $image_array = explode(',', $row['images']);
 
         <!-- Mobile Logo -->
         <div class="mobilie-top-logo no-use2 col-start-2 col-span-2 m-col-start-4">
-         <a href="intro.html">
+         <a href="index.html">
              <img src="images/red-Logo.svg" alt="menu">
          </a>
       </div>
@@ -75,7 +69,7 @@ $image_array = explode(',', $row['images']);
         <!-- Header Navigation -->
         <div id="head-nav" class=" mb-nav l-col-start-3 l-col-span-5 m-col-start-3 m-col-end-10">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="main_home.php">Home</a></li>
 				<li id="work-select" class="arrow-icon"><a href="#">Works</a>
                 <div class="sub-menu1 full-width-grid-con">
                          <ul class="">
@@ -207,11 +201,6 @@ echo '
                 <div class="col-span-full">
 
                 <form id="contactForm">
-    <!-- CSRF  (Cross-Site Request Forgery) Token -->
-    <!-- CSRF is an attack where a malicious website tricks a logged-in user into performing unwanted actions on another site. -->
-    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
-    <!-- The CSRF token is created when the session is started (session_start()) and stored in the $_SESSION['csrf_token'] variable.
-    The token is then injected into the form as a hidden input field. -->
 
     <label for="first_name">First Name: </label>
     <input type="text" name="first_name" id="first_name">

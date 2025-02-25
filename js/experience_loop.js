@@ -1,6 +1,6 @@
 // Experience Loop
 export  function experienceLoop() {
-    if (window.location.pathname.includes('index.php')) {
+    if (window.location.pathname.includes('main_home.php')) {
 const experiences = [
   {
       title: "Front-end / Back-End Developer",

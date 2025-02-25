@@ -7,11 +7,12 @@ export function sendMail() {
         const thisform = event.currentTarget;
         const url = "sendmail.php";
 
-        // Get form data including CSRF token
-        // CSRF is an attack where a malicious website tricks a logged-in user into performing unwanted actions on another site.
-        const formdata = new URLSearchParams(new FormData(thisform));
-        // new FormData(thisform) collects all form fields (including CSRF token).
-        // new URLSearchParams() converts form data into a URL-encoded format, suitable for application/x-www-form-urlencoded.
+        
+        const formdata = 
+        `first_name=${thisform.elements.first_name.value}&last_name=${thisform.elements.last_name.value}&email=${thisform.elements.email.value}&comments=${thisform.elements.comments.value}`
+         console.log(formdata);
+
+       
 
         fetch(url, {
             method: "POST",

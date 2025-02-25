@@ -1,6 +1,6 @@
 // Animations and Scroll Triggers index page
-export  function indexPageAnimation() {
-    if (window.location.pathname.includes("index.php")){
+export  function mainPageAnimation() {
+    if (window.location.pathname.includes("main_home.php")){
         gsap.registerPlugin(ScrollTrigger);
         gsap.registerPlugin(ScrollToPlugin);
         const tl = gsap.timeline();
