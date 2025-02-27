@@ -3,7 +3,7 @@
 <?php
  $cell=0;
 //connect to the running database server and the specific database
-require_once('includes/connect_local.php');
+require_once('includes/connect.php');
 
 //create a query to run in SQL
 // $query = 'SELECT project_id AS procases, project_title, project_info_text, main_images FROM projects';
@@ -262,6 +262,9 @@ $stmt = null;
                     <a href="https://www.linkedin.com/in/emmanuel-opadele-85b902289/" target="_blank">
                         <img src="images/linkdin-logo.svg" alt="Emmanuel's LinkedIn Page">
                     </a>
+                    <a href="https://github.com/Emmanuel9494" target="_blank">
+                        <img src="images/github-mark.svg" alt="Emmanuel's Github Page">
+                    </a>
                 </div>
                         <p class="col-span-full">[ . Full Stack Dev. Creator. Visual Engineer .] <br> Let's Work!</p>
                         <!-- tabs -->
@@ -355,6 +358,9 @@ $stmt = null;
                     </a>
                     <a href="https://www.linkedin.com/in/emmanuel-opadele-85b902289/" target="_blank">
                         <img src="images/linkdin-logo.svg" alt="Emmanuel's LinkedIn Page">
+                    </a>
+                    <a href="https://github.com/Emmanuel9494" target="_blank">
+                        <img src="images/github-mark.svg" alt="Emmanuel's Github Page">
                     </a>
                 </div>
                 <p class="col-span-full rights">©2024 Emmanuel Opadele<br>All Rights Reserved—Privacy Policy.</p>

@@ -1,6 +1,6 @@
 @use "../abstracts" as a;
 @use "../abstracts/mixins" as m;
-@use "../components/introAnimation";
+@use "../components/indexAnimation";
 @use "../components/submittionPage";
 @use "../components/product_list";
 @use "../components/edit_project_form";
@@ -287,6 +287,8 @@ hr{
             margin-left: 15px;
             margin-right: 15px;
             cursor: pointer;
+            width: 32px;
+            height: auto;
         }
         img:hover{
             filter: invert(26%) 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-require_once('includes/connect_local.php');
+require_once('includes/connect.php');
 
 
 $query = 'SELECT projects.project_id AS procases, project_title, client_name, year, month, GROUP_CONCAT(DISTINCT multimedia.media_name) AS images, 
@@ -240,6 +240,9 @@ echo '
                     </a>
                     <a href="https://www.linkedin.com/in/emmanuel-opadele-85b902289/" target="_blank">
                         <img src="images/linkdin-logo.svg" alt="Emmanuel's LinkedIn Page">
+                    </a>
+                    <a href="https://github.com/Emmanuel9494" target="_blank">
+                        <img src="images/github-mark.svg" alt="Emmanuel's Github Page">
                     </a>
                 </div>
                 <p class="col-span-full rights">©2024 Emmanuel Opadele<br>All Rights Reserved—Privacy Policy.</p>
