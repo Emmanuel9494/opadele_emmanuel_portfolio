@@ -78,46 +78,46 @@ export  function worksPageAnimation() {
        
           
          
-        //   Experience animation
-        const tl2 = gsap.timeline({
-            scrollTrigger: {
-              trigger: ".xp-head",
-              start: "top 80%",
-              toggleActions: "play reverse play reverse",
-              markers: false
-            }
-          });
+        // //   Experience animation
+        // const tl2 = gsap.timeline({
+        //     scrollTrigger: {
+        //       trigger: ".xp-head",
+        //       start: "top 80%",
+        //       toggleActions: "play reverse play reverse",
+        //       markers: false
+        //     }
+        //   });
           
-          tl2.fromTo(
-            ".xp-head",
-            { opacity: 0 },
-            { opacity: 1, duration: 1, ease: "power3.out" }
-          );
+        //   tl2.fromTo(
+        //     ".xp-head",
+        //     { opacity: 0 },
+        //     { opacity: 1, duration: 1, ease: "power3.out" }
+        //   );
           
-          tl2.fromTo(
-            ".xp-sub-head",
-            { opacity: 0, x: 100 },
-            { opacity: 1, duration: .5, x: 0, ease: "power3.out" }
-          );
+        //   tl2.fromTo(
+        //     ".xp-sub-head",
+        //     { opacity: 0, x: 100 },
+        //     { opacity: 1, duration: .5, x: 0, ease: "power3.out" }
+        //   );
           
-          tl2.fromTo(
-            ".xp-note-container",
-            { opacity: 0, y: 100 },
-            { opacity: 1, duration: 1, y: 0, ease: "expo.out" }
-          );
+        //   tl2.fromTo(
+        //     ".xp-note-container",
+        //     { opacity: 0, y: 100 },
+        //     { opacity: 1, duration: 1, y: 0, ease: "expo.out" }
+        //   );
  //   Works Completed
-        gsap.from(".mini-works", {
-            scrollTrigger: {
-              trigger: ".mini-works",
-              start: "top 80%",
-              toggleActions: "play reverse play reverse",
-              markers: false
-            },
-            opacity: 0,
-            y: 100,
-            duration: 1,
-            ease: "power1.out"
-          });
+        // gsap.from(".mini-works", {
+        //     scrollTrigger: {
+        //       trigger: ".mini-works",
+        //       start: "top 80%",
+        //       toggleActions: "play reverse play reverse",
+        //       markers: false
+        //     },
+        //     opacity: 0,
+        //     y: 100,
+        //     duration: 1,
+        //     ease: "power1.out"
+        //   });
           //   About Section
         gsap.from("#main-about", {
             scrollTrigger: {

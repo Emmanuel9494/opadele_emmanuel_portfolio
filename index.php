@@ -47,7 +47,7 @@ $stmt->execute();
 
         <!-- Mobile Logo -->
         <div class="mobilie-top-logo no-use2 col-start-2 col-span-2 m-col-start-4">
-         <a href="index.html">
+         <a href="index.php">
              <img src="images/red-Logo.svg" alt="menu">
          </a>
       </div>
@@ -55,7 +55,7 @@ $stmt->execute();
         <!-- Header Navigation -->
         <div id="head-nav" class=" mb-nav l-col-start-3 l-col-span-5 m-col-start-3 m-col-end-10">
             <ul>
-                <li><a href="main_home.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
 				<li id="work-select" class="arrow-icon"><a href="#">Works</a>
                     <div class="sub-menu1 full-width-grid-con">
                          <ul class="">
@@ -72,7 +72,7 @@ $stmt->execute();
                 </li>
 				<li><a href="#main-about" class="link-scroll">About</a></li>
 				<li><a href="#contact" class="link-scroll">Contact</a></li>
-                <li class="no-tblet"><a href="assets/cv-test.docx" download="cv-test.docx">Download CV</a></li>
+                <li class="no-tblet"><a href="assets/emmanuelopadeleresume.pdf" target="_blank" download="emmanuelopadeleresume.pdf">Download CV</a></li>
                 <li><a href="#beyond" class="link-scroll">Beyond This Site</a></li>
                 <p class="no-tblet">2024 Emmanuel Opadele</p>
             </ul>
