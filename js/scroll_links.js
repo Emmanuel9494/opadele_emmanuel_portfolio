@@ -1,5 +1,6 @@
 // Scroll Links
 export function scrollLinks(){
+    if (window.location.pathname.includes("index.php")){
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollToPlugin);
   
@@ -32,4 +33,4 @@ export function scrollLinks(){
         button.addEventListener("click", buttonLink);
     });
   
-  }
+  }}

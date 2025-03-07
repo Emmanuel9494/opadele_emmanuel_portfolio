@@ -1,5 +1,3 @@
-import { indexAnimation } from './index_animation.js';
-indexAnimation();
 import { experienceLoop } from './experience_loop.js';
 experienceLoop();
 import { menuNav } from './menu_nav.js';
@@ -10,7 +8,7 @@ import { customVideo } from './custom_video.js';
 customVideo();
 import { textSwitching } from './text_switching.js';
 textSwitching();
-import { mainPageAnimation } from './main_page_animation.js';
+import { mainPageAnimation } from './index.js';
 mainPageAnimation();
 import { worksPageAnimation } from './works_page_animation.js';
 worksPageAnimation();

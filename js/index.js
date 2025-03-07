@@ -1,6 +1,6 @@
 // Animations and Scroll Triggers index page
 export  function mainPageAnimation() {
-    if (window.location.pathname.includes("main_home.php")){
+    if (window.location.pathname.includes("index.php")){
         gsap.registerPlugin(ScrollTrigger);
         gsap.registerPlugin(ScrollToPlugin);
         const tl = gsap.timeline();
@@ -22,18 +22,18 @@ export  function mainPageAnimation() {
             { opacity: 1, duration: 1, y: 0, ease: "power2.out" }
           );
         //   Image Galleery Slider
-        gsap.from("#slider-container", {
-            scrollTrigger: {
-              trigger: "#slider-container",
-              start: "top 80%",
-              toggleActions: "play reverse play reverse",
-              markers: false 
-            },
-            opacity: 0,
-            y: 100,
-            duration: 1,
-            ease: "power1.out"
-          });
+        // gsap.from("#slider-container", {
+        //     scrollTrigger: {
+        //       trigger: "#slider-container",
+        //       start: "top 80%",
+        //       toggleActions: "play reverse play reverse",
+        //       markers: false 
+        //     },
+        //     opacity: 0,
+        //     y: 100,
+        //     duration: 1,
+        //     ease: "power1.out"
+        //   });
         //   text Switching
         gsap.from("#index-text-switch", {
             scrollTrigger: {
@@ -49,9 +49,9 @@ export  function mainPageAnimation() {
           });
           
           //   Image Galleery Slider2
-        gsap.from("#slider-container2", {
+        gsap.from("#slider-container", {
             scrollTrigger: {
-              trigger: "#slider-container2",
+              trigger: "#slider-container",
               start: "top 80%",
               toggleActions: "play reverse play reverse",
               markers: false 
