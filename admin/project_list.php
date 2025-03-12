@@ -7,7 +7,7 @@ if(!isset($_SESSION['username'])){
   header('Location: login_form.php');
 }
 
-require_once('../includes/connect_local.php');
+require_once('../includes/connect.php');
 $stmt = $connect->prepare('SELECT project_id AS procases, project_title, main_images, client_name, collaboration, problem_info, solution_info, project_info_text, year, month FROM projects ORDER BY project_id ASC');
 
 $stmt->execute();

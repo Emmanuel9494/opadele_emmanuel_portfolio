@@ -1,5 +1,5 @@
 export  function smoothScroll() {
-    if (window.location.pathname.includes("index.php") || (window.location.pathname.includes("works.php"))){
+    // if (window.location.pathname.includes("index.php") || (window.location.pathname.includes("works.php"))){
     gsap.registerPlugin(ScrollTrigger);
   
     // Lenis smooth website scrolling---gsap
@@ -12,4 +12,5 @@ export  function smoothScroll() {
     })
     
     gsap.ticker.lagSmoothing(0)
-  }}
+  }
+// }

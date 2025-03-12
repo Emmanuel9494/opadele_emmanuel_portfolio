@@ -79,7 +79,7 @@ $stmt->execute();
         </div>
         <!-- Resume button  -->
         <div id="cv-resume" class="no-use l-col-start-8 l-col-span-2 m-col-start-8 m-col-span-2">
-            <button><p><a href="assets/cv-test.docx" download="cv-test.docx">Download CV</a></p></button>
+            <button><p><a href="documents/opadele_emmanuel_resume.docx" download="opadele_emmanuel_resume.docx">Download CV</a></p></button>
         </div>
         </section>
     </div>
