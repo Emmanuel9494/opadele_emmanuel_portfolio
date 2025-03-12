@@ -1,6 +1,6 @@
 // Animations and Scroll Triggers index page
 export  function mainPageAnimation() {
-    if (window.location.pathname.includes("index.php")){
+    // if (window.location.pathname.includes("index.php")){
         gsap.registerPlugin(ScrollTrigger);
         gsap.registerPlugin(ScrollToPlugin);
         const tl = gsap.timeline();
@@ -159,4 +159,4 @@ export  function mainPageAnimation() {
             { opacity: 1, duration: 1, x: 0, ease: "power3.out" }
           );
     }
-}
+// }

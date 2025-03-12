@@ -1,6 +1,6 @@
 // Experience Loop
 export  function experienceLoop() {
-    if (window.location.pathname.includes('index.php')) {
+    // if (window.location.pathname.includes('index.php')) {
 const experiences = [
   {
       title: "Front-end / Back-End Developer",
@@ -41,4 +41,4 @@ rightArrow.addEventListener("click", () => {
 skills(xpCount);
     }
 
-}
+// }
