@@ -1,7 +1,7 @@
 // DEVELOPER AND DESIGNER TEXT ANIMATION
 export  function carrerAnimation() {
-    // Check if the current page is 'index.php'
-    // if (window.location.pathname.includes("index.php")) {
+    // Check if the current page is not 'works.php' or 'index.php'
+    // if (!window.location.pathname.includes("works.php") && !window.location.pathname.includes("index.php")) {
   
   
         // GSAP ANIMATION

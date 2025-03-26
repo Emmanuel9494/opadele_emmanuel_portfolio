@@ -29,6 +29,9 @@ $stmt->execute();
         <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+        <script src="js/experience_loop.js"></script>
+        <script src="js/custom_video.js"></script>
+        <script src="js/network_animation.js"></script>
         <script defer type="module" src="js/main.js"></script> 
         <!-- Script End -->
 </head>
@@ -36,8 +39,8 @@ $stmt->execute();
     <h1 class="hidden">Welcome to Emmanuel Opadele's Portfolio</h1>
     <div class="bg-tex"></div>
     
-    <div id="top-nav" class="grid-con col-span-full">
-        <section id="header" class=" full-width-grid-con grid-con ">
+    <div id="top-nav" class="full-width-grid-con grid-con ">
+        <section id="header">
             <h2 class="hidden">Emmanuel's Portfolio Home Page</h2>
 
          <!-- Mobile Menu Icon -->
@@ -78,13 +81,13 @@ $stmt->execute();
             </ul>
         </div>
         <!-- Resume button  -->
-        <div id="cv-resume" class="no-use l-col-start-8 l-col-span-2 m-col-start-8 m-col-span-2">
+        <div id="cv-resume" class="no-use l-col-start-7 l-col-span-2 m-col-start-7 m-col-span-2">
             <button><p><a href="documents/opadele_emmanuel_resume.docx" download="opadele_emmanuel_resume.docx">Download CV</a></p></button>
         </div>
         </section>
     </div>
     <!-- HERO SECTION -->
-    <section id="hero-main" class="grid-con">
+    <section id="hero-main" class="full-width-grid-con">
         <h2 class="hidden"> Portfolio Biography</h2>
        
        
@@ -111,7 +114,7 @@ $stmt->execute();
      <!-- WORKS COMPLETED -->
      <section id="works" class="grid-con">
                 <h2 class="hidden">Completed Works byEmmanuel Opadele</h2>
-                <h3 class="col-span-full">Work Completed</h3>
+                <h3 class="col-span-full">Featured Projects</h3>
                 <?php
                 // mysqli_data_seek($stmt, 0);
                 $stmt = $connect->prepare("SELECT project_id AS procases, project_title, project_info_text, main_images FROM projects");
@@ -276,7 +279,7 @@ $stmt = null;
                          <div class=" abt-tab col-span-full">
                             <p class="abt-head">Certificates</p>
                             <br>
-                            <p class="abt-note">Diploma In Interactive Media Design<br>Diploma In Interactive Media Design</p>
+                            <p class="abt-note">Diploma In Interactive Media Design<br>more industry standard certificates <span class="comingSoon">coming soon...</span></p>
                          </div>
                          <div class=" abt-tab col-span-full">
                             <p class="abt-head">Lifestyle</p>
@@ -292,19 +295,19 @@ $stmt = null;
                 <p class="my-name col-span-full">Emmanuel Opadele</p>
                 <div class="beyond-ad col-start-1 col-span-2 m-col-start-1 m-col-span-3">
                     <img src="images/otm-pic-logo.png" alt="otm-logo">
-                    <button class="click-button"><p><a href="#">optimum Pictures</a></p></button>
+                    <button class="click-button"><p><a href="coming-soon.html" target="_blank">optimum Pictures</a></p></button>
                 </div>
                 <div class="beyond-ad col-start-3 col-span-2 m-col-start-4 m-col-span-3">
                     <img src="images/hando-logo.png" alt="hando-logo">
-                    <button class="click-button"><p><a href="#">Hando Entertaiment</a></p></button>
+                    <button class="click-button"><p><a href="coming-soon.html" target="_blank">Hando Entertaiment</a></p></button>
                 </div>
                 <div class="beyond-ad col-start-1 col-span-2 m-col-start-7 m-col-span-3">
                     <img src="images/kcr-logo.png" alt="kcr-logo">
-                    <button class="click-button"><p><a href="#">Coderedoc Studios</a></p></button>
+                    <button class="click-button"><p><a href="coming-soon.html" target="_blank">Coderedoc Studios</a></p></button>
                 </div>
                 <div class="beyond-ad col-start-3 col-span-2 m-col-start-10 m-col-span-3">
                     <img src="images/otm-pic-logo.png" alt="otm-logo">
-                    <button class="click-button"><p><a href="#">optimum Pictures</a></p></button>
+                    <button class="click-button"><p><a href="coming-soon.html" target="_blank">optimum Pictures</a></p></button>
                 </div>
              </section>
              <!-- Contact Section -->
@@ -366,5 +369,6 @@ $stmt = null;
                 <p class="col-span-full rights">©2024 Emmanuel Opadele<br>All Rights Reserved—Privacy Policy.</p>
                 <p class="col-span-full dand">[ . Developer And Designer .]</p>
                </footer> 
+    
 </body>
 </html>

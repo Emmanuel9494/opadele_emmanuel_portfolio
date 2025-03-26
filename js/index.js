@@ -1,6 +1,6 @@
 // Animations and Scroll Triggers index page
 export  function mainPageAnimation() {
-    // if (window.location.pathname.includes("index.php")){
+  // if (!window.location.pathname.includes("works.php") && !window.location.pathname.includes("index.php")) {
         gsap.registerPlugin(ScrollTrigger);
         gsap.registerPlugin(ScrollToPlugin);
         const tl = gsap.timeline();
@@ -62,32 +62,32 @@ export  function mainPageAnimation() {
             ease: "power1.out"
           });
         //   Experience animation
-        const tl2 = gsap.timeline({
-            scrollTrigger: {
-              trigger: ".xp-head",
-              start: "top 80%",
-              toggleActions: "play reverse play reverse",
-              markers: false
-            }
-          });
+        // const tl2 = gsap.timeline({
+        //     scrollTrigger: {
+        //       trigger: ".xp-head",
+        //       start: "top 80%",
+        //       toggleActions: "play reverse play reverse",
+        //       markers: false
+        //     }
+        //   });
           
-          tl2.fromTo(
-            ".xp-head",
-            { opacity: 0 },
-            { opacity: 1, duration: 1, ease: "power3.out" }
-          );
+        //   tl2.fromTo(
+        //     ".xp-head",
+        //     { opacity: 0 },
+        //     { opacity: 1, duration: 1, ease: "power3.out" }
+        //   );
           
-          tl2.fromTo(
-            ".xp-sub-head",
-            { opacity: 0, x: 100 },
-            { opacity: 1, duration: .5, x: 0, ease: "power3.out" }
-          );
+        //   tl2.fromTo(
+        //     ".xp-sub-head",
+        //     { opacity: 0, x: 100 },
+        //     { opacity: 1, duration: .5, x: 0, ease: "power3.out" }
+        //   );
           
-          tl2.fromTo(
-            ".xp-note-container",
-            { opacity: 0, y: 100 },
-            { opacity: 1, duration: 1, y: 0, ease: "expo.out" }
-          );
+        //   tl2.fromTo(
+        //     ".xp-note-container",
+        //     { opacity: 0, y: 100 },
+        //     { opacity: 1, duration: 1, y: 0, ease: "expo.out" }
+        //   );
  //   Works Completed
         // gsap.from(".mini-works", {
         //     scrollTrigger: {

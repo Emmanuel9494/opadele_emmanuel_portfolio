@@ -132,31 +132,31 @@ export  function worksPageAnimation() {
             ease: "power1.out"
           });
            //   Beyond Note
-        gsap.from(".beyond-ad", {
-            scrollTrigger: {
-              trigger: "#beyond",
-              start: "40% 80%",
-              toggleActions: "play reverse play reverse",
-              markers: false
-            },
-            opacity: 0,
-            y: 100,
-            duration: 1,
-            ease: "power1.out"
-          });
+        // gsap.from(".beyond-ad", {
+        //     scrollTrigger: {
+        //       trigger: "#beyond",
+        //       start: "40% 80%",
+        //       toggleActions: "play reverse play reverse",
+        //       markers: false
+        //     },
+        //     opacity: 0,
+        //     y: 100,
+        //     duration: 1,
+        //     ease: "power1.out"
+        //   });
             //   Beyond notes
-        gsap.from(".b-notes", {
-            scrollTrigger: {
-              trigger: ".b-notes",
-              start: "top 80%",
-              toggleActions: "play reverse play reverse",
-              markers: false 
-            },
-            opacity: 0,
-            y: 100,
-            duration: 1,
-            ease: "back.out(1.7)"
-          });
+        // gsap.from(".b-notes", {
+        //     scrollTrigger: {
+        //       trigger: ".b-notes",
+        //       start: "top 80%",
+        //       toggleActions: "play reverse play reverse",
+        //       markers: false 
+        //     },
+        //     opacity: 0,
+        //     y: 100,
+        //     duration: 1,
+        //     ease: "back.out(1.7)"
+        //   });
            //   P1 and P2
         const tl3 = gsap.timeline({
             scrollTrigger: {

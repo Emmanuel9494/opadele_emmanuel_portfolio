@@ -2,7 +2,7 @@
 export  function aboutInfo() {
    
 
-    if (window.location.pathname.includes("index.php") || (window.location.pathname.includes("works.php"))){
+    
         const tabs = document.querySelectorAll(".abt-tab");
     
         tabs.forEach((tab) => {
@@ -27,4 +27,3 @@ export  function aboutInfo() {
         });
     }
     
-}

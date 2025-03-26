@@ -2,6 +2,8 @@
 MY PORTFOLIO WEBSITE
 
 Welcome to my portfolio website! This repository contains the codebase for my personal portfolio, which showcases my work, skills, and professional experience.
+![Portfolio Preview](images/e-o_portfolio.png)
+
 
 ## **Table of Contents**
 - [Introduction](#introduction)
