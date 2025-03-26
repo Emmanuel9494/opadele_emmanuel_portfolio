@@ -1,36 +1,39 @@
 // CUSTOM VIDEO
-export  function customVideo() {
-    if (window.location.pathname.includes('index.php')) {
-        const player = document.querySelector('video');
-        const videoControls = document.querySelector('#video-controls');
-        const playerButton = document.querySelector('#play-button');
-        const pauseButton = document.querySelector('#pause-button');
-        const stopButton = document.querySelector('#stop-button');
-        const volumeSlider = document.querySelector('#change-vol');
-        const fullScreen = document.querySelector('#full-screen');
-        const videoContainer = document.querySelector('#reel-box');
-        const soundButton = document.querySelector('#volume');
-        const video = document.querySelector('#video-player');
-        const countdownText = document.querySelector('#countdown-text');
-        let countdownInterval;
-        let timeRemaining = 0;
-    
+document.addEventListener('DOMContentLoaded', () => {
+    const player = document.querySelector('video');
+    const videoControls = document.querySelector('#video-controls');
+    const playerButton = document.querySelector('#play-button');
+    const pauseButton = document.querySelector('#pause-button');
+    const stopButton = document.querySelector('#stop-button');
+    const volumeSlider = document.querySelector('#change-vol');
+    const fullScreen = document.querySelector('#full-screen');
+    const videoContainer = document.querySelector('#reel-box');
+    const soundButton = document.querySelector('#volume');
+    const video = document.querySelector('#video-player');
+    const countdownText = document.querySelector('#countdown-text');
+    let countdownInterval;
+    let timeRemaining = 0;
+
+    // Only proceed if all required elements exist
+    if (player && videoControls && playerButton && pauseButton && stopButton && 
+        volumeSlider && fullScreen && videoContainer && soundButton && video && countdownText) {
+        
         player.controls = false;
         videoControls.classList.remove('hidden');
-    
+
         // Functions
         function playVideo() {
             console.log("Play Button Clicked");
             player.play();
             startCountdown();
         }
-    
+
         function pauseVideo() {
             console.log("Pause button Clicked");
             player.pause();
             clearInterval(countdownInterval);
         }
-    
+
         function stopVideo() {
             console.log("Stop button Clicked");
             player.pause();
@@ -40,7 +43,7 @@ export  function customVideo() {
             timeRemaining = Math.floor(video.duration); // Reset countdown to full duration
             countdownText.textContent = timeRemaining;
         }
-    
+
         function screenPauseEtPlay() {
             if (player.paused) {
                 player.play();  // If video is paused, play it
@@ -50,7 +53,7 @@ export  function customVideo() {
                 clearInterval(countdownInterval); // Stop countdown when the video ends
             }
         }
-    
+
         function changeVolume() {
             console.log(volumeSlider.value);
             console.log('Volume changing');
@@ -64,7 +67,7 @@ export  function customVideo() {
                 soundButton.src = 'images/ctrl-volume.svg'; // Change back to unmuted icon
             }
         }
-    
+
         function toggleFullScreen() {
             console.log('Full Screen Toggled');
             if (document.fullscreenElement) {
@@ -77,19 +80,19 @@ export  function customVideo() {
                 videoContainer.requestFullscreen();
             }
         }
-    
+
         function showControls() {
             console.log('video controls hidden');
             videoControls.classList.remove('hide');
         }
-    
+
         function hideControls() {
             if (player.paused) {
                 return;
             }
             videoControls.classList.add('hide');
         }
-    
+
         function muteOrUnmute() {
             if (player.muted) {
                 player.muted = false; // Unmute the video
@@ -103,7 +106,7 @@ export  function customVideo() {
                 console.log('Sound Off');
             }
         }
-    
+
         // Countdown timer
         function startCountdown() {
             clearInterval(countdownInterval); // Ensure no multiple intervals
@@ -135,7 +138,12 @@ export  function customVideo() {
         player.addEventListener("mouseenter", showControls);
         player.addEventListener("mouseleave", hideControls);
         soundButton.addEventListener("click", muteOrUnmute);
+        video.addEventListener('ended', () => {
+            clearInterval(countdownInterval);
+            player.currentTime = 0;
+            timeRemaining = Math.floor(video.duration);
+            countdownText.textContent = timeRemaining;
+        });
     }
+});
     
-
-}

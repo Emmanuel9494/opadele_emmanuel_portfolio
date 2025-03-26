@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="images/red-Logo.svg" rel="icon" type="image/svg+xml">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <title>Coming Soon - E.O Opadele</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            position: relative;
+            padding: 20px;
+        }
+
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            object-fit: cover;
+            opacity: 0.15;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(18, 18, 18, 0.7);
+            z-index: 1;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            gap: 1.5rem;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            animation: float 6s ease-in-out infinite;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #E50000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .coming-soon {
+            font-size: 2rem;
+            color: #ffffff;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            overflow: hidden;
+        }
+
+        .coming-soon::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #E50000, transparent);
+            animation: slideRight 2s linear infinite;
+        }
+
+        @keyframes slideRight {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        .social-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .social-links img {
+            width: 32px;
+            height: 32px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links img:hover {
+            transform: scale(1.1);
+            filter: invert(26%) 
+                    sepia(95%) 
+                    saturate(7500%) 
+                    hue-rotate(360deg) 
+                    brightness(94%) 
+                    contrast(100%);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                gap: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+            
+            .coming-soon {
+                font-size: 1.5rem;
+            }
+
+            .logo {
+                width: 120px;
+            }
+
+            .social-links {
+                gap: 1.5rem;
+            }
+
+            .social-links img {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <video class="video-background" autoplay loop muted playsinline>
+        <source src="videos/bokeh2.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="container">
+        <img src="images/red-Logo.svg" alt="E.O Opadele Logo" class="logo">
+        <h1>Something Exciting</h1>
+        <p class="coming-soon">Coming Soon</p>
+        <p>We're working on something amazing.<br>Stay tuned for updates!</p>
+        
+        <div class="social-links">
+            <a href="https://www.instagram.com/olak_crola/#" target="_blank">
+                <img src="images/insta-logo.svg" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/in/emmanuel-opadele-85b902289/" target="_blank">
+                <img src="images/linkdin-logo.svg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/Emmanuel9494" target="_blank">
+                <img src="images/github-mark.svg" alt="GitHub">
+            </a>
+        </div>
+    </div>
+</body>
+</html> 

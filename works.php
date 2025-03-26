@@ -21,6 +21,7 @@ $stmt = null;
 // $row = mysqli_fetch_assoc($results);
 
 $image_array = explode(',', $row['images']);
+$tech_array = explode(',', $row['tech_name']);
 
 // Debugging: Visually Checking each image result for project ID
 // echo '<pre style="color: white;">';
@@ -50,8 +51,8 @@ $image_array = explode(',', $row['images']);
     <h1 class="hidden">Welcome to Emmanuel Opadele's Portfolio</h1>
     <div class="bg-tex"></div>
     
-    <div id="top-nav"  class="grid-con col-span-full">
-        <section id="header" class=" full-width-grid-con grid-con ">
+    <div id="top-nav" class="full-width-grid-con grid-con ">
+        <section id="header">
             <h2 class="hidden">Emmanuel's Portfolio Home Page</h2>
 
          <!-- Mobile Menu Icon -->
@@ -128,39 +129,56 @@ echo '
     </div>
 </section>
 <div class="grid-con work-show ws1">
-     <img src="images/'.$image_array[0].'" alt="gif" class="col-span-full">
+     <img src="images/'.$image_array[0].'" alt="Project showcase" class="col-span-full">
 </div>
 <div id="p-info" class="grid-con">
-    <h2 class="col-span-full">Project Info:</h2>
+    <h2 class="col-span-full">Project Overview</h2>
     <p class="col-span-full">' . $row['project_info_text'] . '</p>
 </div>
 <div class="grid-con work-show ws2">
-     <img src="images/'.$image_array[1].'" alt="gif" class="col-span-full">
+     <img src="images/'.$image_array[1].'" alt="Project showcase" class="col-span-full">
 </div>
-<section id="main-about" class="main-about grid-con">
-    <div class="abt-tab col-span-full ws3">
-        <p class="abt-head w-font">Technology Used:</p>
-        <p class="abt-note">' . $row['tech_name'] . '</p>
-        <div class="grid-con work-show">
-            <img src="images/'.$image_array[2].'" alt="gif" class="col-span-full">
+<section id="project-details" class="grid-con">
+    <div class="project-section col-span-full m-col-start-1 m-col-span-6 l-col-start-1 l-col-span-6">
+        <div class="section-content">
+            <h3 class="section-title">Technology Stack</h3>
+            <p class="section-text">These are the technologies <br> used in the project.</p>
+            <p class="section-text">' . implode(', ', $tech_array) . '</p>
+        </div>
+        
+        <div class="grid-con work-show work-show-3">
+            <img src="images/'.$image_array[2].'" alt="Project showcase" class="col-span-full big-img" >
         </div>
     </div>
-    <div class="abt-tab col-span-full">
-        <p class="abt-head w-font">Collaborations:</p>
-        <p class="abt-note">' . $row['collaboration'] . '</p>
+    <div class=" col-span-full work-show work-show-2 m-col-start-7 m-col-span-6 l-col-start-7 l-col-span-6">
+     <img src="images/'.$image_array[1].'" alt="Project showcase" class="col-span-full">
     </div>
-    <div class="abt-tab col-span-full">
-        <p class="abt-head w-font">Problem:</p>
-        <p class="abt-note">' . $row['problem_info'] . '</p>
+
+    <div class="project-section col-span-full">
+        <div class="section-content">
+            <h3 class="section-title">Collaborations</h3>
+            <p class="section-text">' . $row['collaboration'] . '</p>
+        </div>
     </div>
-    <div class="abt-tab col-span-full">
-        <p class="abt-head w-font">Solution:</p>
-        <p class="abt-note">' . $row['solution_info'] . '</p>
+
+    <div class="col-span-full work-show work-show-2 m-col-start-1 m-col-span-6 l-col-start-1 l-col-span-6">
+     <img src="images/'.$image_array[2].'" alt="Project showcase" class="col-span-full">
+</div>
+
+    <div class="project-section col-span-full m-col-start-7 m-col-span-6 l-col-start-7 l-col-span-6">
+        <div class="section-content">
+            <h3 class="section-title">Challenge</h3>
+            <p class="section-text">' . $row['problem_info'] . '</p>
+        </div>
     </div>
-</section>
-<div class="grid-con work-show">
-    <img src="images/'.$image_array[0].'" alt="gif" class="col-span-full">
-</div>';
+
+    <div class="project-section col-span-full">
+        <div class="section-content">
+            <h3 class="section-title">Solution</h3>
+            <p class="section-text">' . $row['solution_info'] . '</p>
+        </div>
+    </div>
+</section>';
 ?>
 
 
@@ -176,19 +194,19 @@ echo '
                 <p class="my-name col-span-full">Emmanuel Opadele</p>
                 <div class="beyond-ad col-start-1 col-span-2 m-col-start-1 m-col-span-3">
                     <img src="images/otm-pic-logo.png" alt="otm-logo">
-                    <button class="click-button"><p><a href="#">optimum Pictures</a></p></button>
+                    <button class="click-button"><p><a href="coming-soon.html" target="_blank">optimum Pictures</a></p></button>
                 </div>
                 <div class="beyond-ad col-start-3 col-span-2 m-col-start-4 m-col-span-3">
                     <img src="images/hando-logo.png" alt="hando-logo">
-                    <button class="click-button"><p><a href="#">Hando Entertaiment</a></p></button>
+                    <button class="click-button"><p><a href="coming-soon.html" target="_blank">Hando Entertaiment</a></p></button>
                 </div>
                 <div class="beyond-ad col-start-1 col-span-2 m-col-start-7 m-col-span-3">
                     <img src="images/kcr-logo.png" alt="kcr-logo">
-                    <button class="click-button"><p><a href="#">Coderedoc Studios</a></p></button>
+                    <button class="click-button"><p><a href="coming-soon.html" target="_blank">Coderedoc Studios</a></p></button>
                 </div>
                 <div class="beyond-ad col-start-3 col-span-2 m-col-start-10 m-col-span-3">
                     <img src="images/otm-pic-logo.png" alt="otm-logo">
-                    <button class="click-button"><p><a href="#">optimum Pictures</a></p></button>
+                    <button class="click-button"><p><a href="coming-soon.html" target="_blank">optimum Pictures</a></p></button>
                 </div>
              </section>
              <!-- Contact Section -->
@@ -248,6 +266,15 @@ echo '
                 <p class="col-span-full rights">©2024 Emmanuel Opadele<br>All Rights Reserved—Privacy Policy.</p>
                 <p class="col-span-full dand">[ . Developer And Designer .]</p>
                </footer>
+            <!-- Just containers -->
+             <section id="clean-up">
+            <div class="blinkCursor text intro-bio cta-work"></div>
+            <div id="slider-container"></div>
+            <div id="main-about"></div>
+            <div id="intro-text"></div>
+            <div id="index-text-switch"></div>
+            </section>
+            
 
 </body>
 </html>

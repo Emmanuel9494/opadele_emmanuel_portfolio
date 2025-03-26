@@ -1,11 +1,7 @@
-import { experienceLoop } from './experience_loop.js';
-experienceLoop();
 import { menuNav } from './menu_nav.js';
 menuNav();
 import { carrerAnimation } from './dev_and_des_txt_animation.js';
 carrerAnimation();
-import { customVideo } from './custom_video.js';
-customVideo();
 import { textSwitching } from './text_switching.js';
 textSwitching();
 import { mainPageAnimation } from './index.js';
@@ -20,3 +16,4 @@ import { aboutInfo } from './about_info.js';
 aboutInfo();
 import { sendMail } from './send_mail.js';
 sendMail();
+

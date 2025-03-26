@@ -10,6 +10,7 @@ a{
     background-color: a.$black;
     padding-bottom: 10px;
     background-color: a.$black;
+    width: 100%;
     #header{
         display: flex;
         justify-content: space-between;
@@ -17,10 +18,11 @@ a{
         background-color: a.$black;
         border-bottom: 10px solid a.$white;
         position: fixed;
-        width: 100vw;
+        width: 100%;
         z-index: 99;
         padding-top: 10px;
-        margin-left: -35px;
+        left: 0;
+        right: 0;
     }
 
     .container-mobile-top-logo{
@@ -126,6 +128,7 @@ a{
   @media screen and (min-width: 768px) {
     #top-nav{  
         height: 50px;
+        width: 100%;
         .container-mobile-top-logo{
             display: none;
         }
@@ -141,13 +144,13 @@ a{
        
         #header{
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
-            height: 10vh;
             border-bottom: 10px solid a.$white;
             position: fixed;
             width: 100%;
-            margin-left: -45px;
+            left: 0;
+            right: 0;
         }
         
       
@@ -160,8 +163,10 @@ a{
         }
       
         #cv-resume{
+           
             text-align: center;
            button{
+            margin-left: -35px;
             font-size: 12px;
            }
         }
@@ -263,7 +268,8 @@ a{
 //   DESKTOP
 @media screen and (min-width: 1280px) {
     #top-nav{
-        height: 60px;
+        height: 70px;
+        width: 100%;
         .container-mobile-top-logo{
             display: none;
         }
@@ -275,12 +281,10 @@ a{
         }
        
         #header{
-            max-height: 11vh;
-            border-bottom: 0px;
-            margin-left: -55px;
             border-bottom: 5px solid a.$white;
-          
-      
+            width: 100%;
+            left: 0;
+            right: 0;
         }
         
       
