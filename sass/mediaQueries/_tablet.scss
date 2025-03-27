@@ -113,10 +113,12 @@
   .top-text-switch{
       font-size: 50px;
       font-weight: 500;
+      -webkit-text-stroke: 1px a.$black; 
   }
   .middle-text-switch{
       font-size: 65px;
       font-weight: 500;
+      letter-spacing: 2px;
      
      
   }
@@ -124,6 +126,7 @@
       font-family: a.$bold-font;
       font-size: 50px;
       font-weight: 500; 
+      -webkit-text-stroke: 1px a.$black; 
   }
 }
 // Experience Section
@@ -455,6 +458,10 @@
     
     .navigation-manual, .navigation-auto {
         bottom: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         
         .manual-btn, div {
             width: 14px;

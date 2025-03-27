@@ -199,8 +199,11 @@ body{
         left: 50%;
         transform: translateX(-50%);
         display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 10px;
         z-index: 10;
+        width: 100%;
         
         .manual-btn {
             width: 12px;
@@ -227,8 +230,11 @@ body{
         left: 50%;
         transform: translateX(-50%);
         display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 10px;
         z-index: 5;
+        width: 100%;
         
         div {
             width: 12px;
@@ -288,7 +294,7 @@ body{
         text-align: right;
         line-height: 30px;
         font-family: a.$body-font;
-        margin-left: 50px;
+        margin-left: 40px;
     }
 }
 #index-text-switch{
@@ -296,29 +302,31 @@ body{
     justify-items: center;
     align-items: center;
     margin-top: -220px;
+    margin-left: 20px;
     .top-text-switch{
         font-family: a.$bold-font;
-        font-size: 30px;
+        font-size: 1.6rem;
         text-transform: uppercase;
         color: transparent;
         font-weight: 500;
-        -webkit-text-stroke: 1px a.$black; 
+        -webkit-text-stroke: .8px a.$black; 
+        margin-bottom: 10px;
     }
     .middle-text-switch{
         font-family: a.$bold-font;
-        font-size: 40px;
+        font-size: 1.7rem;
         text-transform: uppercase;
         color: a.$red;
         font-weight: 500;
     }
     .bottom-text-switch{
         font-family: a.$bold-font;
-        font-size: 30px;
+        font-size: 1.6rem;
         text-transform: uppercase;
         color: transparent;
         font-weight: 500;
-        -webkit-text-stroke: 1px a.$black; 
-       
+        -webkit-text-stroke: .8px a.$black; 
+        margin-top: 10px;
     }
 }
 // Experience Section
