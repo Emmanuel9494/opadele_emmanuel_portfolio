@@ -72,8 +72,7 @@ body{
         position: relative;
         z-index: 4;
         padding: 20px;
-        // background: rgba(122, 5, 5, 0.146);
-        // backdrop-filter: blur(2px);
+        
         
         
         #intro-names{
@@ -302,7 +301,7 @@ body{
     justify-items: center;
     align-items: center;
     margin-top: -220px;
-    margin-left: 20px;
+    
     .top-text-switch{
         font-family: a.$bold-font;
         font-size: 1.6rem;
